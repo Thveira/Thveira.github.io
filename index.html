@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cursos sobre tráfego pago e marketing digital">
+    <title>Venda de Cursos de Tráfego Pago</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Estilos externos (CSS) -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+        }
+        .course-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .course-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            width: 300px;
+            text-align: center;
+        }
+        .course-item h3 {
+            color: #333;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Academia de Tráfego Pago</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Home -->
+    <section id="home">
+        <h2>Bem-vindo à Academia de Tráfego Pago!</h2>
+        <p>Aprenda a gerar tráfego pago e aumentar suas vendas online com nossos cursos especializados!</p>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre">
+        <h2>Sobre</h2>
+        <p>Eu sou um especialista em tráfego pago e marketing digital com anos de experiência ajudando empreendedores a crescerem seus negócios online. Aqui, compartilho meus conhecimentos e estratégias para você alcançar o sucesso em suas campanhas de tráfego pago.</p>
+    </section>
+
+    <!-- Seção Cursos -->
+    <section id="cursos">
+        <h2>Nossos Cursos</h2>
+        <p>Escolha o curso que mais se adequa às suas necessidades:</p>
+
+        <div class="course-list">
+            <div class="course-item">
+                <h3>Curso de Google Ads</h3>
+                <p>Aprenda a criar e otimizar campanhas no Google Ads.</p>
+                <a href="#" class="btn">Saiba Mais</a>
+            </div>
+            <div class="course-item">
+                <h3>Curso de Facebook Ads</h3>
+                <p>Aprenda a segmentar e gerar leads com anúncios no Facebook.</p>
+                <a href="#" class="btn">Saiba Mais</a>
+            </div>
+            <div class="course-item">
+                <h3>Curso de Instagram Ads</h3>
+                <p>Domine as campanhas pagas no Instagram e alcance mais pessoas.</p>
+                <a href="#" class="btn">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <form action="enviar_email.php" method="POST">
+            <label for="nome">Seu Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Seu E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <input type="submit" value="Enviar Mensagem">
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Academia de Tráfego Pago. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
