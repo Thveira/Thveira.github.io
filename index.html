@@ -45,7 +45,6 @@
         header ul li a:hover {
             text-decoration: underline;
         }
-        /* Seção Hero */
         .hero {
             background: url('hero-image.jpg') no-repeat center center/cover;
             height: 100vh;
@@ -65,67 +64,34 @@
             font-size: 1.2rem;
             margin-bottom: 20px;
         }
-        /* Botões estilos refinados */
         .btn {
-            background: #0056a8; /* Azul principal */
+            background: #0056a8;
             color: #fff;
             padding: 12px 24px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 25px;
             border: none;
-            transition: all 0.3s ease; /* Transição suave */
-            display: inline-block; /* Garante que o botão seja tratado como bloco inline */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             cursor: pointer;
         }
         .btn:hover {
-            background: #004080; /* Tom mais escuro no hover */
-            transform: translateY(-3px); /* Leve elevação no hover */
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+            background: #004080;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
         }
         .btn:active {
-            transform: translateY(1px); /* Efeito de clique */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduz a sombra no clique */
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
-        /* Cursos */
-        .courses {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .course-card {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            width: 300px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .course-card img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-        .course-card h3 {
-            font-size: 1.2rem;
-            margin-top: 15px;
-        }
-        .course-card p {
-            font-size: 0.9rem;
-            color: #555;
-            margin: 10px 0;
-        }
-        .course-card .btn {
-            width: fit-content; /* Botão ocupa apenas o espaço necessário */
-            margin: 10px auto 0; /* Centraliza o botão dentro do card */
-        }
-        /* Planos */
         .plans {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
+            padding: 50px 20px;
         }
         .plan-card {
             background: #fff;
@@ -135,46 +101,40 @@
             padding: 20px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
         .plan-card.recommended {
             border-color: #ff9000;
+            box-shadow: 0 8px 12px rgba(255, 144, 0, 0.4);
         }
-        .plan-card .tag {
+        .plan-card.recommended::before {
+            content: "Recomendado";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
             background: #ff9000;
             color: #fff;
             font-size: 0.8rem;
             padding: 5px 10px;
             border-radius: 15px;
-            margin-top: -20px;
-            display: inline-block;
-            position: relative;
-            top: -10px;
+            font-weight: bold;
         }
-        /* Formulário de contato */
-        form input, form textarea, form button {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-family: Arial, sans-serif;
+        .plan-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
         }
-        form input:focus, form textarea:focus {
-            border-color: #0056a8;
-            outline: none;
-            box-shadow: 0 0 4px rgba(0, 86, 168, 0.5);
+        .plan-card p {
+            font-size: 0.9rem;
+            color: #555;
+            margin: 10px 0;
         }
-        form button {
-            background: #ff9000; /* Laranja principal */
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        form button:hover {
-            background: #cc7300;
-            transform: scale(1.05); /* Leve aumento no hover */
+        .plan-card span {
+            font-size: 1.5rem;
+            color: #0056a8;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
         }
         footer {
             background: #0056a8;
@@ -213,31 +173,6 @@
         <a href="#contact" class="btn">Saiba Mais</a>
     </section>
 
-    <!-- Cursos -->
-    <section id="courses">
-        <h2>Cursos Disponíveis</h2>
-        <div class="courses">
-            <div class="course-card">
-                <img src="imagem_2024-11-27_193313063.png" alt="Google Ads">
-                <h3>Google Ads</h3>
-                <p>Aprenda a dominar campanhas no maior buscador do mundo.</p>
-                <a href="#plans" class="btn">Saiba Mais</a>
-            </div>
-            <div class="course-card">
-                <img src="Meta_ads.png" alt="Meta Ads">
-                <h3>Meta Ads</h3>
-                <p>Gerencie campanhas no Facebook e Instagram com excelência.</p>
-                <a href="#plans" class="btn">Saiba Mais</a>
-            </div>
-            <div class="course-card">
-                <img src="Linkedin Ads" alt="LinkedIn Ads">
-                <h3>LinkedIn Ads</h3>
-                <p>Traga resultados em marketing B2B usando o LinkedIn.</p>
-                <a href="#plans" class="btn">Saiba Mais</a>
-            </div>
-        </div>
-    </section>
-
     <!-- Planos -->
     <section id="plans">
         <h2>Planos</h2>
@@ -248,6 +183,30 @@
                 <span>R$300</span>
                 <a href="#contact" class="btn">Contratar</a>
             </div>
+            <div class="plan-card">
+                <h3>Plano Prata</h3>
+                <p>Acesso completo</p>
+                <span>R$600</span>
+                <a href="#contact" class="btn">Contratar</a>
+            </div>
+            <div class="plan-card">
+                <h3>Plano Gold</h3>
+                <p>Suporte avançado</p>
+                <span>R$900</span>
+                <a href="#contact" class="btn">Contratar</a>
+            </div>
+            <div class="plan-card recommended">
+                <h3>Plano Platinum</h3>
+                <p>Acesso total + mentoria</p>
+                <span>R$1200</span>
+                <a href="#contact" class="btn">Contratar</a>
+            </div>
         </div>
     </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Gestão de Tráfego Pago. Todos os direitos reservados.</p>
+    </footer>
 </body>
+</html>
