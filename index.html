@@ -1,230 +1,143 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestão de Tráfego Pago - Potencialize seus Resultados</title>
-    <style>
-        /* Estilos globais */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        header {
-            background: #0056a8;
-            color: #fff;
-            padding: 20px 10px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        header nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
-
-        header ul {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-        }
-
-        header ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 10px 15px;
-            transition: background 0.3s;
-        }
-
-        header ul li a:hover {
-            background: #004080;
-            border-radius: 5px;
-        }
-
-        /* Estilo das seções */
-        section {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #0056a8;
-        }
-
-        section p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin: 20px 0;
-        }
-
-        section img,
-        section iframe {
-            max-width: 100%;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-
-        .btn {
-            background: #ff9000;
-            color: #fff;
-            padding: 12px 24px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background 0.3s;
-            display: inline-block;
-        }
-
-        .btn:hover {
-            background: #cc7300;
-        }
-
-        /* Seção de planos */
-        .plans {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .plan-card {
-            background: #fff;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            width: 300px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        .plan-card.recommended {
-            border-color: #ff9000;
-            box-shadow: 0 8px 12px rgba(255, 144, 0, 0.4);
-        }
-
-        .plan-card.recommended::before {
-            content: "Recomendado";
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #ff9000;
-            color: #fff;
-            font-size: 0.8rem;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-weight: bold;
-        }
-
-        footer {
-            background: #0056a8;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Tráfego - Converta Mais</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      background-color: #f8f8f8;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #0070f3;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 2rem;
+      background-color: #eef5ff;
+    }
+    .hero-text {
+      max-width: 600px;
+    }
+    .hero-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #0070f3;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero-text a {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background-color: #0070f3;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .hero-text a:hover {
+      background-color: #005bb5;
+    }
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .features {
+      padding: 2rem;
+      text-align: center;
+      background-color: #fff;
+    }
+    .features h3 {
+      font-size: 1.8rem;
+      color: #0070f3;
+      margin-bottom: 1rem;
+    }
+    .features .feature-item {
+      margin: 1rem 0;
+    }
+    .testimonials {
+      padding: 2rem;
+      background-color: #eef5ff;
+      text-align: center;
+    }
+    .testimonials h3 {
+      font-size: 1.8rem;
+      color: #0070f3;
+      margin-bottom: 1rem;
+    }
+    .testimonial-item {
+      margin: 1rem 0;
+      font-style: italic;
+      color: #555;
+    }
+    footer {
+      padding: 1rem 2rem;
+      text-align: center;
+      background-color: #0070f3;
+      color: #fff;
+    }
+    footer a {
+      color: #eef5ff;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Cabeçalho -->
-    <header>
-        <nav>
-            <div class="logo">Gestão de Tráfego</div>
-            <ul>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#about-us">Sobre Nós</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#testimonials">Depoimentos</a></li>
-                <li><a href="#plans">Planos</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <h1>Gestor de Tráfego Profissional</h1>
+</header>
 
-    <!-- Seção Hero -->
-    <section id="home">
-        <h2>Alavanque as suas vendas!</h2>
-        <p>Transforme seus investimentos em resultados reais com estratégias inteligentes e personalizadas.</p>
-        <a href="#plans" class="btn">Conheça nossos planos</a>
-        <img src="DALL·E 2024-11-27 20.15.58 - Uma ilustração criativa mostrando estratégias de marketing digital em um conceito visual, com elementos como gráficos de análise de dados, redes socia" alt="Estratégias de Marketing Digital">
-    </section>
-
-    <!-- Sobre Nós -->
-<section id="about-us">
-    <h2>Sobre Nós</h2>
-    <p>Somos especialistas em gestão de tráfego pago, oferecendo soluções que geram resultados reais. Com anos de experiência no mercado digital, ajudamos empresas a atingirem suas metas de forma eficiente.</p>
-    <img src="Imagem do WhatsApp de 2024-11-27 à(s) 20.25.11_5313d4d7.jpg" width="300">
-    <a href="#plans" class="btn">Veja nossos planos</a>
+<section class="hero">
+  <div class="hero-text">
+    <h2>Potencialize suas vendas agora mesmo!</h2>
+    <p>Transforme seu negócio com estratégias de tráfego pagas altamente eficazes. Resultados garantidos com métricas claras.</p>
+    <a href="#contato">Fale com um especialista</a>
+  </div>
+  <div class="hero-image">
+    <img src="https://via.placeholder.com/500" alt="Imagem de tráfego">
+  </div>
 </section>
 
-    <!-- Serviços -->
-    <section id="services">
-        <h2>Nossos Serviços</h2>
-        <p>Gerenciamento de campanhas no Google Ads, Meta Ads (Facebook e Instagram) e LinkedIn Ads.</p>
-        <img src="services-image.jpg" alt="Nossos Serviços de Marketing">
-        <a href="#plans" class="btn">Saiba mais nos planos</a>
-    </section>
+<section class="features">
+  <h3>Por que escolher nosso serviço?</h3>
+  <div class="feature-item">📈 Aumento de conversões</div>
+  <div class="feature-item">💰 Custo-benefício garantido</div>
+  <div class="feature-item">🎯 Estratégias personalizadas</div>
+</section>
 
-    <!-- Depoimentos -->
-    <section id="testimonials">
-        <h2>Depoimentos</h2>
-        <p>"Desde que contratei os serviços, minhas vendas aumentaram em 300%. Recomendo muito!"</p>
-        <p>"O suporte e a expertise da equipe são incríveis. Resultado garantido!"</p>
-        <img src="testimonials-image.jpg" alt="Depoimentos de Clientes Satisfeitos">
-        <a href="#plans" class="btn">Veja os planos</a>
-    </section>
+<section class="testimonials">
+  <h3>O que nossos clientes dizem?</h3>
+  <div class="testimonial-item">"Minha loja nunca vendeu tanto! Super recomendo!" - Maria S.</div>
+  <div class="testimonial-item">"O retorno sobre investimento foi impressionante." - João P.</div>
+</section>
 
-    <!-- Planos -->
-    <section id="plans">
-        <h2>Planos</h2>
-        <div class="plans">
-            <div class="plan-card">
-                <h3>Plano Bronze</h3>
-                <p>Acesso básico</p>
-                <span>R$300</span>
-                <a href="#contact" class="btn">Contratar</a>
-            </div>
-            <div class="plan-card">
-                <h3>Plano Prata</h3>
-                <p>Acesso completo</p>
-                <span>R$600</span>
-                <a href="#contact" class="btn">Contratar</a>
-            </div>
-            <div class="plan-card">
-                <h3>Plano Gold</h3>
-                <p>Suporte avançado</p>
-                <span>R$900</span>
-                <a href="#contact" class="btn">Contratar</a>
-            </div>
-            <div class="plan-card recommended">
-                <h3>Plano Platinum</h3>
-                <p>Acesso total + mentoria</p>
-                <span>R$1200</span>
-                <a href="#contact" class="btn">Contratar</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2024 Gestão de Tráfego Pago. Todos os direitos reservados.</p>
-    </footer>
+<footer>
+  <p>© 2024 Gestor de Tráfego | <a href="#termos">Termos de uso</a> | <a href="#privacidade">Política de Privacidade</a></p>
+</footer>
 
 </body>
 </html>
-
