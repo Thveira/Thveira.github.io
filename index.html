@@ -65,41 +65,28 @@
             font-size: 1.2rem;
             margin-bottom: 20px;
         }
-        .hero a {
-            background: #ff9000;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-        .hero a:hover {
-            background: #cc7300;
-        }
-        /* Seção genérica */
-        section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #0056a8;
-        }
-        section p {
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
+        /* Botões estilos refinados */
         .btn {
-            background: #0056a8;
+            background: #0056a8; /* Azul principal */
             color: #fff;
-            padding: 10px 20px;
+            padding: 12px 24px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 5px;
+            border-radius: 25px;
+            border: none;
+            transition: all 0.3s ease; /* Transição suave */
+            display: inline-block; /* Garante que o botão seja tratado como bloco inline */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+            cursor: pointer;
         }
         .btn:hover {
-            background: #004080;
+            background: #004080; /* Tom mais escuro no hover */
+            transform: translateY(-3px); /* Leve elevação no hover */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+        }
+        .btn:active {
+            transform: translateY(1px); /* Efeito de clique */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduz a sombra no clique */
         }
         /* Cursos */
         .courses {
@@ -128,6 +115,10 @@
             font-size: 0.9rem;
             color: #555;
             margin: 10px 0;
+        }
+        .course-card .btn {
+            width: fit-content; /* Botão ocupa apenas o espaço necessário */
+            margin: 10px auto 0; /* Centraliza o botão dentro do card */
         }
         /* Planos */
         .plans {
@@ -159,6 +150,32 @@
             position: relative;
             top: -10px;
         }
+        /* Formulário de contato */
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: Arial, sans-serif;
+        }
+        form input:focus, form textarea:focus {
+            border-color: #0056a8;
+            outline: none;
+            box-shadow: 0 0 4px rgba(0, 86, 168, 0.5);
+        }
+        form button {
+            background: #ff9000; /* Laranja principal */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        form button:hover {
+            background: #cc7300;
+            transform: scale(1.05); /* Leve aumento no hover */
+        }
         footer {
             background: #0056a8;
             color: #fff;
@@ -186,7 +203,7 @@
     <section id="home" class="hero">
         <h1>Gestão de Tráfego Pago</h1>
         <p>Impulsione suas vendas com estratégias profissionais.</p>
-        <a href="#plans">Garanta Seu Sucesso</a>
+        <a href="#plans" class="btn">Garanta Seu Sucesso</a>
     </section>
 
     <!-- Sobre Nós -->
@@ -229,44 +246,8 @@
                 <h3>Plano Bronze</h3>
                 <p>Acesso básico</p>
                 <span>R$300</span>
-                <a href="#contact" class="btn">Adquirir</a>
-            </div>
-            <div class="plan-card">
-                <h3>Plano Prata</h3>
-                <p>Acesso completo</p>
-                <span>R$600</span>
-                <a href="#contact" class="btn">Adquirir</a>
-            </div>
-            <div class="plan-card recommended">
-                <h3>Plano Platinum</h3>
-                <span class="tag">Recomendado</span>
-                <p>Acesso total + mentoria</p>
-                <span>R$1200</span>
-                <a href="#contact" class="btn">Adquirir</a>
-            </div>
-            <div class="plan-card">
-                <h3>Plano Gold</h3>
-                <p>Suporte avançado</p>
-                <span>R$900</span>
-                <a href="#contact" class="btn">Adquirir</a>
+                <a href="#contact" class="btn">Contratar</a>
             </div>
         </div>
     </section>
-
-    <!-- Contato -->
-    <section id="contact">
-        <h2>Entre em Contato</h2>
-        <form>
-            <input type="text" placeholder="Seu Nome" required>
-            <input type="email" placeholder="Seu Email" required>
-            <textarea placeholder="Sua Mensagem" required></textarea>
-            <button type="submit" class="btn">Enviar</button>
-        </form>
-    </section>
-
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2024 Gestão de Tráfego Pago. Todos os direitos reservados.</p>
-    </footer>
 </body>
-</html>
