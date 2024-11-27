@@ -3,76 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Curso de Gestão de Tráfego Pago</title>
+    <title>Gestão de Tráfego Pago - Potencialize seus Resultados</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #0056a8;
+            color: #fff;
+            padding: 20px 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        header ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header ul li a:hover {
+            text-decoration: underline;
+        }
+        /* Seção Hero */
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .hero a {
+            background: #ff9000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .hero a:hover {
+            background: #cc7300;
+        }
+        /* Seção genérica */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #0056a8;
+        }
+        section p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background: #0056a8;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #004080;
+        }
+        /* Cursos */
+        .courses {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .course-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .course-card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .course-card h3 {
+            font-size: 1.2rem;
+            margin-top: 15px;
+        }
+        .course-card p {
+            font-size: 0.9rem;
+            color: #555;
+            margin: 10px 0;
+        }
+        /* Planos */
+        .plans {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .plan-card {
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            width: 250px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .plan-card.recommended {
+            border-color: #ff9000;
+        }
+        .plan-card .tag {
+            background: #ff9000;
+            color: #fff;
+            font-size: 0.8rem;
+            padding: 5px 10px;
+            border-radius: 15px;
+            margin-top: -20px;
+            display: inline-block;
+            position: relative;
+            top: -10px;
+        }
+        footer {
+            background: #0056a8;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+    </style>
 </head>
 <body>
     <!-- Cabeçalho -->
     <header>
         <nav>
-            <div class="logo">Gestão de Tráfego Pago</div>
+            <div class="logo">Gestão de Tráfego</div>
             <ul>
                 <li><a href="#home">Início</a></li>
-                <li><a href="#about">Sobre</a></li>
+                <li><a href="#about-us">Sobre Nós</a></li>
                 <li><a href="#courses">Cursos</a></li>
+                <li><a href="#plans">Planos</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Seção Principal -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Transforme sua carreira com nosso curso de Gestão de Tráfego Pago</h1>
-            <p>Aprenda a aumentar suas vendas com tráfego pago e estratégias de marketing digital</p>
-            <a href="#courses" class="cta-button">Confira o curso</a>
-        </div>
+        <h1>Gestão de Tráfego Pago</h1>
+        <p>Impulsione suas vendas com estratégias profissionais.</p>
+        <a href="#plans">Garanta Seu Sucesso</a>
     </section>
 
-    <!-- Sobre o Curso -->
-    <section id="about" class="about">
-        <h2>Sobre o Curso</h2>
-        <p>O nosso curso é a escolha perfeita para quem deseja dominar as ferramentas de tráfego pago e alcançar resultados expressivos com campanhas no Facebook, Google Ads, entre outros.</p>
-        <div class="interactive-image">
-            <img src="course-image.jpg" alt="Curso de Gestão de Tráfego Pago" id="courseImage" />
-            <p>Clique na imagem para saber mais!</p>
-        </div>
+    <!-- Sobre Nós -->
+    <section id="about-us">
+        <h2>Sobre Nós</h2>
+        <p>Somos especialistas em gestão de tráfego pago e ajudamos empresas a alcançarem resultados incríveis!</p>
+        <a href="#contact" class="btn">Saiba Mais</a>
     </section>
 
-    <!-- Cursos Disponíveis -->
-    <section id="courses" class="courses">
+    <!-- Cursos -->
+    <section id="courses">
         <h2>Cursos Disponíveis</h2>
-        <div class="course-card">
-            <img src="facebook-ads.jpg" alt="Curso de Facebook Ads">
-            <h3>Facebook Ads - Avançado</h3>
-            <p>Aprenda a criar campanhas de alta conversão no Facebook.</p>
-            <a href="#" class="btn">Saiba Mais</a>
+        <div class="courses">
+            <div class="course-card">
+                <img src="google-ads.jpg" alt="Google Ads">
+                <h3>Google Ads</h3>
+                <p>Aprenda a dominar campanhas no maior buscador do mundo.</p>
+                <a href="#plans" class="btn">Saiba Mais</a>
+            </div>
+            <div class="course-card">
+                <img src="meta-ads.jpg" alt="Meta Ads">
+                <h3>Meta Ads</h3>
+                <p>Gerencie campanhas no Facebook e Instagram com excelência.</p>
+                <a href="#plans" class="btn">Saiba Mais</a>
+            </div>
+            <div class="course-card">
+                <img src="linkedin-ads.jpg" alt="LinkedIn Ads">
+                <h3>LinkedIn Ads</h3>
+                <p>Traga resultados em marketing B2B usando o LinkedIn.</p>
+                <a href="#plans" class="btn">Saiba Mais</a>
+            </div>
         </div>
-        <div class="course-card">
-            <img src="google-ads" alt="Curso de Google Ads">
-            <h3>Google Ads - Estratégias Vencedoras</h3>
-            <p>Domine o Google Ads e atraia mais clientes para o seu negócio.</p>
-            <a href="#" class="btn">Saiba Mais</a>
+    </section>
+
+    <!-- Planos -->
+    <section id="plans">
+        <h2>Planos</h2>
+        <div class="plans">
+            <div class="plan-card">
+                <h3>Plano Bronze</h3>
+                <p>Acesso básico</p>
+                <span>R$300</span>
+                <a href="#contact" class="btn">Adquirir</a>
+            </div>
+            <div class="plan-card">
+                <h3>Plano Prata</h3>
+                <p>Acesso completo</p>
+                <span>R$600</span>
+                <a href="#contact" class="btn">Adquirir</a>
+            </div>
+            <div class="plan-card recommended">
+                <h3>Plano Platinum</h3>
+                <span class="tag">Recomendado</span>
+                <p>Acesso total + mentoria</p>
+                <span>R$1200</span>
+                <a href="#contact" class="btn">Adquirir</a>
+            </div>
+            <div class="plan-card">
+                <h3>Plano Gold</h3>
+                <p>Suporte avançado</p>
+                <span>R$900</span>
+                <a href="#contact" class="btn">Adquirir</a>
+            </div>
         </div>
     </section>
 
     <!-- Contato -->
-    <section id="contact" class="contact">
+    <section id="contact">
         <h2>Entre em Contato</h2>
-        <form id="contactForm">
-            <input type="text" placeholder="Nome" id="name" required>
-            <input type="email" placeholder="Email" id="email" required>
-            <textarea placeholder="Sua mensagem" id="message" required></textarea>
-            <button type="submit">Enviar Mensagem</button>
+        <form>
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="email" placeholder="Seu Email" required>
+            <textarea placeholder="Sua Mensagem" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
         </form>
     </section>
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2024 Curso de Gestão de Tráfego Pago. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Gestão de Tráfego Pago. Todos os direitos reservados.</p>
     </footer>
-
-    <script src="scripts.js"></script>
 </body>
 </html>
