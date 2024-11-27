@@ -1,120 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cursos sobre tráfego pago e marketing digital">
-    <title>Venda de Cursos de Tráfego Pago</title>
+    <title>Curso de Trafego Pago</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Estilos externos (CSS) -->
     <style>
-        /* Reset básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f4;
             color: #333;
         }
-
         header {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 20px 0;
         }
-
         nav ul {
             list-style-type: none;
             padding: 0;
         }
-
         nav ul li {
             display: inline;
             margin-right: 20px;
         }
-
         nav ul li a {
             color: white;
             text-decoration: none;
             font-weight: bold;
         }
-
-        /* Seção de Cursos */
+        section {
+            padding: 20px;
+        }
         .course-list {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
         }
-
         .course-item {
             background-color: white;
             border: 1px solid #ddd;
-            border-radius: 8px;
-            width: 300px;
+            padding: 15px;
             margin: 10px;
-            padding: 20px;
+            width: 300px;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
-        .course-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .course-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
         .course-item h3 {
-            font-size: 1.5rem;
             color: #333;
         }
-
-        .course-item p {
-            color: #555;
-            margin-bottom: 15px;
-        }
-
         .btn {
             background-color: #4CAF50;
             color: white;
             padding: 10px;
             border: none;
-            text-align: center;
-            font-weight: bold;
-            border-radius: 4px;
             cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: background-color 0.3s ease;
+            text-align: center;
         }
-
         .btn:hover {
             background-color: #45a049;
         }
-
-        /* Seção de Contato */
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
         }
-
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
+
+    
 <body>
 
     <!-- Cabeçalho -->
@@ -131,6 +108,24 @@
     </header>
 
     <!-- Seção de Cursos -->
+    
+    <!-- Seção Home -->
+    <section id="home">
+        <h2>Bem-vindo à Academia de Tráfego Pago!</h2>
+        <p>Aprenda a gerar tráfego pago e aumentar suas vendas online com nossos cursos especializados!</p>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre">
+        <h2>Sobre</h2>
+        <p>Eu sou um especialista em tráfego pago e marketing digital com anos de experiência ajudando empreendedores a crescerem seus negócios online. Aqui, compartilho meus conhecimentos e estratégias para você alcançar o sucesso em suas campanhas de tráfego pago.</p>
+    </section>
+
+    <!-- Seção Cursos -->
+    <section id="cursos">
+        <h2>Nossos Cursos</h2>
+        <p>Escolha o curso que mais se adequa às suas necessidades:</p>
+
     <section id="cursos">
         <h2>Explore Nossos Cursos</h2>
         <div class="course-list">
