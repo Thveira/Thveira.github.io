@@ -1,197 +1,228 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestor de Tráfego - Resultados Extraordinários</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-  <style>
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Tráfego Pago - Potencialize seus Resultados</title>
+    <style>
+        /* Estilos globais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            scroll-behavior: smooth; /* Rolagem suave para navegadores compatíveis */
+        }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: #333;
-      background-color: #f9f9f9;
-      line-height: 1.6;
-    }
+        header {
+            background: #0056a8;
+            color: #fff;
+            padding: 20px 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-    header {
-      background: linear-gradient(90deg, #0061c0, #0095f6);
-      color: #fff;
-      padding: 2rem 2rem 3rem;
-      text-align: center;
-    }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    header h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      margin-bottom: 0.5rem;
-    }
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
 
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
+        header ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
 
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 3rem 2rem;
-      background-color: #eef5ff;
-    }
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: background 0.3s;
+        }
 
-    .hero-text {
-      max-width: 600px;
-    }
+        header ul li a:hover {
+            background: #004080;
+            border-radius: 5px;
+        }
 
-    .hero-text h2 {
-      font-size: 2.8rem;
-      font-weight: 800;
-      color: #0061c0;
-      margin-bottom: 1rem;
-    }
+        /* Estilo das seções */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
 
-    .hero-text p {
-      font-size: 1.3rem;
-      margin-bottom: 1.5rem;
-      color: #555;
-    }
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #0056a8;
+        }
 
-    .hero-text a {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background-color: #0061c0;
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 700;
-      text-decoration: none;
-      border-radius: 5px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s ease, transform 0.2s;
-    }
+        section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 20px 0;
+        }
 
-    .hero-text a:hover {
-      background-color: #004f9e;
-      transform: scale(1.05);
-    }
+        section img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
 
-    .hero-image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
+        .btn {
+            background: #ff9000;
+            color: #fff;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+            display: inline-block;
+        }
 
-    .features {
-      padding: 3rem 2rem;
-      text-align: center;
-      background-color: #fff;
-    }
+        .btn:hover {
+            background: #cc7300;
+        }
 
-    .features h3 {
-      font-size: 2rem;
-      font-weight: 800;
-      color: #0061c0;
-      margin-bottom: 1.5rem;
-    }
+        /* Seção de planos */
+        .plans {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
 
-    .features .feature-item {
-      font-size: 1.2rem;
-      color: #555;
-      margin: 1rem 0;
-    }
+        .plan-card {
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
 
-    .features .feature-item span {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #0061c0;
-    }
+        .plan-card.recommended {
+            border-color: #ff9000;
+            box-shadow: 0 8px 12px rgba(255, 144, 0, 0.4);
+        }
 
-    .testimonials {
-      padding: 3rem 2rem;
-      background-color: #eef5ff;
-      text-align: center;
-    }
+        .plan-card.recommended::before {
+            content: "Recomendado";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff9000;
+            color: #fff;
+            font-size: 0.8rem;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-weight: bold;
+        }
 
-    .testimonials h3 {
-      font-size: 2rem;
-      font-weight: 800;
-      color: #0061c0;
-      margin-bottom: 1rem;
-    }
-
-    .testimonial-item {
-      font-size: 1.1rem;
-      font-style: italic;
-      color: #555;
-      margin: 1rem 0;
-    }
-
-    footer {
-      padding: 1.5rem 2rem;
-      text-align: center;
-      background-color: #0061c0;
-      color: #fff;
-    }
-
-    footer p {
-      margin: 0.5rem 0;
-    }
-
-    footer a {
-      color: #f3faff;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 0 0.5rem;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+        footer {
+            background: #0056a8;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <h1>Gestor de Tráfego Premium</h1>
-  <p>Desbloqueie o potencial completo do seu negócio com estratégias avançadas de marketing digital.</p>
-</header>
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <div class="logo">Gestão de Tráfego</div>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about-us">Sobre Nós</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#testimonials">Depoimentos</a></li>
+                <li><a href="#plans">Planos</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section class="hero">
-  <div class="hero-text">
-    <h2>Alcance Resultados Extraordinários!</h2>
-    <p>Especialistas em tráfego pago que entregam ROI elevado e crescimento acelerado para sua empresa.</p>
-    <a href="#contato">Agende sua Consultoria</a>
-  </div>
-  <div class="hero-image">
-    <img src="https://via.placeholder.com/600x400" alt="Resultados de tráfego pago">
-  </div>
-</section>
+    <!-- Seção Hero -->
+    <section id="home">
+        <h2>Alavanque as suas vendas!</h2>
+        <p>Transforme seus investimentos em resultados reais com estratégias inteligentes e personalizadas.</p>
+        <a href="#plans" class="btn">Conheça nossos planos</a>
+    </section>
 
-<section class="features">
-  <h3>Por que trabalhar conosco?</h3>
-  <div class="feature-item"><span>📊</span> Aumento comprovado de conversões</div>
-  <div class="feature-item"><span>💼</span> Expertise em múltiplos mercados</div>
-  <div class="feature-item"><span>🚀</span> Estratégias personalizadas e inovadoras</div>
-</section>
+    <!-- Sobre Nós -->
+    <section id="about-us">
+        <h2>Sobre Nós</h2>
+        <p>Somos especialistas em gestão de tráfego pago, oferecendo soluções que geram resultados reais. Com anos de experiência no mercado digital, ajudamos empresas a atingirem suas metas de forma eficiente.</p>
+    </section>
 
-<section class="testimonials">
-  <h3>Depoimentos de Sucesso</h3>
-  <div class="testimonial-item">"Duplicamos nosso faturamento em apenas 3 meses! O time é incrível!" - Ana F.</div>
-  <div class="testimonial-item">"O acompanhamento e os resultados foram além das nossas expectativas." - Ricardo M.</div>
-</section>
+    <!-- Serviços -->
+    <section id="services">
+        <h2>Nossos Serviços</h2>
+        <p>Gerenciamento de campanhas no Google Ads, Meta Ads (Facebook e Instagram) e LinkedIn Ads.</p>
+    </section>
 
-<footer>
-  <p>© 2024 Gestor de Tráfego Premium</p>
-  <p><a href="#termos">Termos de Uso</a> | <a href="#privacidade">Política de Privacidade</a></p>
-</footer>
+    <!-- Depoimentos -->
+    <section id="testimonials">
+        <h2>Depoimentos</h2>
+        <p>"Desde que contratei os serviços, minhas vendas aumentaram em 300%. Recomendo muito!"</p>
+        <p>"O suporte e a expertise da equipe são incríveis. Resultado garantido!"</p>
+    </section>
 
+    <!-- Planos -->
+    <section id="plans">
+        <h2>Planos</h2>
+        <div class="plans">
+            <div class="plan-card">
+                <h3>Plano Bronze</h3>
+                <p>Acesso básico</p>
+                <span>R$300</span>
+                <a href="#contact" class="btn">Contratar</a>
+            </div>
+            <div class="plan-card">
+                <h3>Plano Prata</h3>
+                <p>Acesso completo</p>
+                <span>R$600</span>
+                <a href="#contact" class="btn">Contratar</a>
+            </div>
+            <div class="plan-card recommended">
+                <h3>Plano Platinum</h3>
+                <p>Acesso total + mentoria</p>
+                <span>R$1200</span>
+                <a href="#contact" class="btn">Contratar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Gestão de Tráfego Pago. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JavaScript para rolagem suave -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
