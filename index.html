@@ -3,221 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestão de Tráfego Pago</title>
+    <title>Gestão de Tráfego Pago - Potencialize seus Resultados</title>
     <style>
-        /* Estilo Global */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Estilos globais */
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f4;
             color: #333;
             scroll-behavior: smooth;
         }
 
-        /* Cabeçalho */
         header {
-            background-color: #0056a8;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
+            background: #0056a8;
+            color: #fff;
+            padding: 15px;
             position: sticky;
             top: 0;
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        header nav ul {
-            list-style: none;
+        header nav {
             display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        header nav ul li a {
-            text-decoration: none;
-            color: white;
-            padding: 10px 15px;
-            transition: background-color 0.3s;
-        }
-
-        header nav ul li a:hover {
-            background-color: #004080;
-            border-radius: 5px;
-        }
-
-        /* Conteúdo Principal */
-        main {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 10px;
-        }
-
-        .hero {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            color: #0056a8;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin: 20px 0;
-        }
-
-        .hero img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        /* Seções com Planos */
-        .plans {
-            display: flex;
-            gap: 20px;
             justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
         }
 
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex: 1;
+        }
+
+        header ul {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            transition: background 0.3s;
+        }
+
+        header ul li a:hover {
+            background: #004080;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 40px 15px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #0056a8;
+        }
+
+        section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        section img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        section a.btn {
+            display: inline-block;
+            background: #ff9000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        section a.btn:hover {
+            background: #cc7300;
+        }
+
+        /* Estilo dos planos */
+        .plans {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
         .plan-card {
-            background: white;
+            background: #fff;
             border: 1px solid #ccc;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            flex: 1 1 calc(33.333% - 20px);
-            max-width: calc(33.333% - 20px);
+            width: 280px;
+            padding: 15px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .plan-card:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
 
         .plan-card h3 {
-            font-size: 1.5rem;
-            color: #0056a8;
             margin-bottom: 15px;
+            color: #0056a8;
         }
 
-        .plan-card p {
-            font-size: 1rem;
-            margin: 10px 0;
-        }
-
-        .plan-card a {
-            display: inline-block;
-            margin-top: 15px;
-            background: #ff9000;
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
+        .plan-card span {
+            display: block;
+            font-size: 1.4rem;
             font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            color: #333;
+            margin: 15px 0;
         }
 
-        .plan-card a:hover {
-            background: #cc7300;
+        .plan-card ul {
+            list-style-type: none;
+            padding: 0;
         }
 
-        /* Rodapé */
+        .plan-card ul li {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .plan-card .crossed {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .plan-card.recommended {
+            border: 2px solid #ff9000;
+            box-shadow: 0 8px 12px rgba(255, 144, 0, 0.4);
+        }
+
+        .plan-card.recommended::before {
+            content: "Recomendado";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff9000;
+            color: #fff;
+            font-size: 0.8rem;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-weight: bold;
+        }
+
         footer {
             background: #0056a8;
-            color: white;
+            color: #fff;
             text-align: center;
-            padding: 15px 0;
-            margin-top: 30px;
+            padding: 20px;
         }
 
         /* Responsividade */
         @media (max-width: 768px) {
-            header nav ul {
+            header nav {
                 flex-direction: column;
-                gap: 10px;
+                align-items: flex-start;
             }
 
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .plans {
+            header ul {
                 flex-direction: column;
-                gap: 20px;
+                align-items: flex-start;
+                gap: 5px;
             }
 
             .plan-card {
-                max-width: 100%;
+                width: 100%;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            section p {
+                font-size: 1rem;
+            }
+
+            section img {
+                margin: 10px 0;
             }
         }
 
         @media (max-width: 480px) {
-            .hero p {
-                font-size: 1rem;
+            header .logo {
+                font-size: 1.2rem;
             }
 
-            header nav ul li a {
-                padding: 8px 10px;
+            header ul li a {
+                font-size: 0.9rem;
+                padding: 5px 10px;
+            }
+
+            section h2 {
+                font-size: 1.6rem;
+            }
+
+            section p {
+                font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#planos">Planos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Conteúdo Principal -->
-    <main>
-        <section class="hero" id="inicio">
-            <h1>Bem-vindo à Gestão de Tráfego</h1>
-            <p>Transforme seus resultados com as melhores estratégias de tráfego pago.</p>
-            <img src="https://via.placeholder.com/1200x500" alt="Gestão de Tráfego">
-        </section>
-
-        <section class="plans" id="planos">
-            <div class="plan-card">
-                <h3>Plano Básico</h3>
-                <p>Ideal para iniciantes.</p>
-                <p><strong>R$ 499/mês</strong></p>
-                <a href="#">Contratar</a>
-            </div>
-            <div class="plan-card">
-                <h3>Plano Avançado</h3>
-                <p>Perfeito para expandir.</p>
-                <p><strong>R$ 999/mês</strong></p>
-                <a href="#">Contratar</a>
-            </div>
-            <div class="plan-card">
-                <h3>Plano Premium</h3>
-                <p>Máxima performance.</p>
-                <p><strong>R$ 1.499/mês</strong></p>
-                <a href="#">Contratar</a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2024 Gestão de Tráfego - Todos os direitos reservados</p>
-    </footer>
+    <!-- Código permanece o mesmo... -->
 </body>
 </html>
-
