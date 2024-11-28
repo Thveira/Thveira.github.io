@@ -256,18 +256,18 @@
 
     .testimonial-card {
         background: #fff;
-        border: 2px solid #ddd;
-        border-radius: 10px;
+        border: 4px solid #0056a8; /* Moldura azul mais espessa */
+        border-radius: 15px; /* Bordas arredondadas */
         padding: 20px;
         width: 280px;
         text-align: center;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
 
     .testimonial-card:hover {
         transform: scale(1.05);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
     }
 
     .testimonial-card p {
@@ -289,65 +289,66 @@
     }
 </style>
 
-
-
     <!-- Planos -->
 <!-- Seção de Planos -->
 <section id="plans">
     <h2>Planos</h2>
     <div class="plans">
         <!-- Plano Bronze -->
-        <div class="plan-card bronze">
+        <div class="plan-card" style="background-color: #e5e5e5;">
             <h3>Plano Bronze</h3>
-            <p>Acesso básico</p>
             <ul>
-                <li class="verified">✅ Curso básico Google ADS</li>
-                <li class="verified">✅ Curso Avançado Google ADS</li>
-                <li class="verified">✅ Aulas EAD para tirar dúvidas 1h por semana</li>
-                <li class="not-verified">❌ Curso básico Meta ADS</li>
-                <li class="not-verified">❌ Curso Avançado Meta ADS</li>
-                <li class="not-verified">❌ Aula EAD para tirar dúvidas 2 vezes na semana (1 hr)</li>
-                <li class="not-verified">❌ Curso básico Linkedin ADS</li>
-                <li class="not-verified">❌ Curso Avançado de Linkedin ADS</li>
-                <li class="not-verified">❌ MENTORIA sobre os conteúdos do curso</li>
+                <li><span class="check">✅</span> Curso básico Google ADS</li>
+                <li><span class="check">✅</span> Curso Avançado Google ADS</li>
+                <li><span class="check">✅</span> Aulas EAD para tira dúvidas 1h por semana</li>
+
+                <li><span class="cross">❌</span> Curso básico Meta ADS</li>
+                <li><span class="cross">❌</span> Curso Avançado Meta ADS</li>
+                <li><span class="cross">❌</span> Aula EAD para tirar dúvidas 2 vezes por semana (1h de tira dúvidas)</li>
+
+                <li><span class="cross">❌</span> Curso básico LinkedIn ADS</li>
+                <li><span class="cross">❌</span> Curso Avançado de LinkedIn ADS</li>
+                <li><span class="cross">❌</span> MENTORIA sobre os conteúdos do curso</li>
             </ul>
             <span>R$300</span>
             <a href="#contact" class="btn">Contratar Bronze</a>
         </div>
 
         <!-- Plano Prata -->
-        <div class="plan-card prata">
+        <div class="plan-card" style="background-color: #e5e5e5;">
             <h3>Plano Prata</h3>
-            <p>Acesso completo</p>
             <ul>
-                <li class="verified">✅ Curso básico Google ADS</li>
-                <li class="verified">✅ Curso Avançado Google ADS</li>
-                <li class="verified">✅ Aulas EAD para tirar dúvidas 1h por semana</li>
-                <li class="verified">✅ Curso básico Meta ADS</li>
-                <li class="verified">✅ Curso Avançado Meta ADS</li>
-                <li class="verified">✅ Aula EAD para tirar dúvidas 2 vezes na semana (1 hr)</li>
-                <li class="not-verified">❌ Curso básico Linkedin ADS</li>
-                <li class="not-verified">❌ Curso Avançado de Linkedin ADS</li>
-                <li class="not-verified">❌ MENTORIA sobre os conteúdos do curso</li>
+                <li><span class="check">✅</span> Curso básico Google ADS</li>
+                <li><span class="check">✅</span> Curso Avançado Google ADS</li>
+                <li><span class="check">✅</span> Aulas EAD para tira dúvidas 1h por semana</li>
+
+                <li><span class="check">✅</span> Curso básico Meta ADS</li>
+                <li><span class="check">✅</span> Curso Avançado Meta ADS</li>
+                <li><span class="check">✅</span> Aula EAD para tirar dúvidas 2 vezes por semana (1h de tira dúvidas)</li>
+
+                <li><span class="cross">❌</span> Curso básico LinkedIn ADS</li>
+                <li><span class="cross">❌</span> Curso Avançado de LinkedIn ADS</li>
+                <li><span class="cross">❌</span> MENTORIA sobre os conteúdos do curso</li>
             </ul>
             <span>R$600</span>
             <a href="#contact" class="btn">Contratar Prata</a>
         </div>
 
         <!-- Plano Platinum -->
-        <div class="plan-card platinum recommended">
+        <div class="plan-card recommended" style="background-color: #e5e5e5;">
             <h3>Plano Platinum</h3>
-            <p>Acesso total + mentoria</p>
             <ul>
-                <li class="verified">✅ Curso básico Google ADS</li>
-                <li class="verified">✅ Curso Avançado Google ADS</li>
-                <li class="verified">✅ Aulas EAD para tirar dúvidas 1h por semana</li>
-                <li class="verified">✅ Curso básico Meta ADS</li>
-                <li class="verified">✅ Curso Avançado Meta ADS</li>
-                <li class="verified">✅ Aula EAD para tirar dúvidas 2 vezes na semana (1 hr)</li>
-                <li class="verified">✅ Curso básico Linkedin ADS</li>
-                <li class="verified">✅ Curso Avançado de Linkedin ADS</li>
-                <li class="verified">✅ MENTORIA sobre os conteúdos do curso</li>
+                <li><span class="check">✅</span> Curso básico Google ADS</li>
+                <li><span class="check">✅</span> Curso Avançado Google ADS</li>
+                <li><span class="check">✅</span> Aulas EAD para tira dúvidas 1h por semana</li>
+
+                <li><span class="check">✅</span> Curso básico Meta ADS</li>
+                <li><span class="check">✅</span> Curso Avançado Meta ADS</li>
+                <li><span class="check">✅</span> Aula EAD para tirar dúvidas 2 vezes por semana (1h de tira dúvidas)</li>
+
+                <li><span class="check">✅</span> Curso básico LinkedIn ADS</li>
+                <li><span class="check">✅</span> Curso Avançado de LinkedIn ADS</li>
+                <li><span class="check">✅</span> MENTORIA sobre os conteúdos do curso</li>
             </ul>
             <span>R$1200</span>
             <a href="#contact" class="btn">Contratar Platinum</a>
@@ -355,31 +356,31 @@
     </div>
 </section>
 
-<!-- Estilo para os Planos -->
+<!-- Estilos para os Planos -->
 <style>
     #plans {
         padding: 60px 20px;
+        background-color: #f4f4f4;
         text-align: center;
-        background-color: #f9f9f9;
     }
 
     #plans h2 {
         font-size: 2.5rem;
         color: #0056a8;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
     .plans {
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 30px;
         flex-wrap: wrap;
     }
 
     .plan-card {
         background: #fff;
-        border: 2px solid #ddd;
-        border-radius: 10px;
+        border: 2px solid #ccc;
+        border-radius: 15px;
         padding: 20px;
         width: 280px;
         text-align: center;
@@ -392,15 +393,24 @@
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
-    .plan-card h3 {
-        margin-bottom: 15px;
-        color: #0056a8;
+    .plan-card ul {
+        list-style: none;
+        padding: 0;
+        text-align: left;
     }
 
-    .plan-card p {
-        font-size: 1.2rem;
-        margin-bottom: 15px;
-        color: #333;
+    .plan-card ul li {
+        font-size: 1.1rem;
+        margin: 10px 0;
+    }
+
+    .plan-card ul li .check {
+        color: #28a745; /* Verde para os itens marcados */
+    }
+
+    .plan-card ul li .cross {
+        color: #999; /* Cinza claro para os itens não disponíveis */
+        text-decoration: line-through; /* Risca os itens não disponíveis */
     }
 
     .plan-card span {
@@ -411,47 +421,12 @@
         margin: 20px 0;
     }
 
-    .plan-card ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 20px 0;
-        font-size: 1rem;
-        text-align: left;
-    }
-
-    .plan-card ul li {
-        margin-bottom: 10px;
-    }
-
-    /* Itens verificados e não verificados */
-    .verified {
-        color: #28a745; /* Verde para os itens marcados com ✅ */
-    }
-
-    .not-verified {
-        color: #ccc; /* Cinza para os itens marcados com ❌ */
-        text-decoration: line-through; /* Risco nos itens ❌ */
-    }
-
-    /* Planos específicos */
-    .bronze {
-        background-color: #f4f4f4; /* Cor de fundo do Plano Bronze */
-    }
-
-    .prata {
-        background-color: #e0e0e0; /* Cor de fundo do Plano Prata */
-    }
-
-    .platinum {
-        background-color: #f0f8ff; /* Cor de fundo do Plano Platinum */
-    }
-
-    .recommended {
-        border: 3px solid #ff9000; /* Borda chamativa para o Plano Platinum */
+    .plan-card.recommended {
+        border: 2px solid #ff9000; /* Bordas douradas para o plano recomendado */
         box-shadow: 0 8px 12px rgba(255, 144, 0, 0.4);
     }
 
-    .recommended::before {
+    .plan-card.recommended::before {
         content: "Recomendado";
         position: absolute;
         top: -15px;
@@ -459,32 +434,29 @@
         transform: translateX(-50%);
         background: #ff9000;
         color: #fff;
-        font-size: 1rem;
+        font-size: 0.8rem;
         padding: 5px 10px;
         border-radius: 15px;
         font-weight: bold;
     }
 
-    /* Botões */
     .btn {
         display: block;
-        margin: 20px auto;
+        width: max-content;
+        margin: 0 auto;
+        background: #ff9000;
+        color: #fff;
         padding: 12px 24px;
-        background: #0056a8;
-        color: white;
         text-decoration: none;
         font-weight: bold;
         border-radius: 5px;
-        transition: background 0.3s ease-in-out;
+        transition: background 0.3s;
     }
 
     .btn:hover {
-        background: #003f7d;
+        background: #cc7300;
     }
 </style>
-
-
-
 
     <!-- JavaScript para rolagem suave -->
     <script>
