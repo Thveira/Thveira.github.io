@@ -55,7 +55,6 @@
             border-radius: 5px;
         }
 
-        /* Estilo das seções */
         section {
             padding: 60px 20px;
             text-align: center;
@@ -88,13 +87,14 @@
             border-radius: 5px;
             transition: background 0.3s;
             display: inline-block;
+            margin-top: 15px;
         }
 
         .btn:hover {
             background: #cc7300;
         }
 
-        /* Seção de planos */
+        /* Estilo dos planos */
         .plans {
             display: flex;
             flex-wrap: wrap;
@@ -111,6 +111,12 @@
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .plan-card:hover {
+            transform: scale(1.05); /* Aumenta o tamanho */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
         }
 
         .plan-card.recommended {
@@ -160,6 +166,7 @@
     <section id="home">
         <h2>Alavanque as suas vendas!</h2>
         <p>Transforme seus investimentos em resultados reais com estratégias inteligentes e personalizadas.</p>
+        <img src="https://via.placeholder.com/800x400" alt="Imagem ilustrativa de estratégias de marketing">
         <a href="#plans" class="btn">Conheça nossos planos</a>
     </section>
 
@@ -167,12 +174,16 @@
     <section id="about-us">
         <h2>Sobre Nós</h2>
         <p>Somos especialistas em gestão de tráfego pago, oferecendo soluções que geram resultados reais. Com anos de experiência no mercado digital, ajudamos empresas a atingirem suas metas de forma eficiente.</p>
+        <img src="https://via.placeholder.com/800x400" alt="Imagem da equipe trabalhando">
+        <a href="#services" class="btn">Saiba mais sobre nós</a>
     </section>
 
     <!-- Serviços -->
     <section id="services">
         <h2>Nossos Serviços</h2>
         <p>Gerenciamento de campanhas no Google Ads, Meta Ads (Facebook e Instagram) e LinkedIn Ads.</p>
+        <img src="https://via.placeholder.com/800x400" alt="Imagem representando serviços de marketing digital">
+        <a href="#testimonials" class="btn">Veja o que nossos clientes dizem</a>
     </section>
 
     <!-- Depoimentos -->
@@ -180,29 +191,34 @@
         <h2>Depoimentos</h2>
         <p>"Desde que contratei os serviços, minhas vendas aumentaram em 300%. Recomendo muito!"</p>
         <p>"O suporte e a expertise da equipe são incríveis. Resultado garantido!"</p>
+        <img src="https://via.placeholder.com/800x400" alt="Clientes satisfeitos">
+        <a href="#plans" class="btn">Confira nossos planos</a>
     </section>
 
     <!-- Planos -->
     <section id="plans">
         <h2>Planos</h2>
+        <div>
+            <img src="https://via.placeholder.com/800x400" alt="Tabela de planos e preços">
+        </div>
         <div class="plans">
             <div class="plan-card">
                 <h3>Plano Bronze</h3>
                 <p>Acesso básico</p>
                 <span>R$300</span>
-                <a href="#contact" class="btn">Contratar</a>
+                <a href="#contact" class="btn">Contratar Bronze</a>
             </div>
             <div class="plan-card">
                 <h3>Plano Prata</h3>
                 <p>Acesso completo</p>
                 <span>R$600</span>
-                <a href="#contact" class="btn">Contratar</a>
+                <a href="#contact" class="btn">Contratar Prata</a>
             </div>
             <div class="plan-card recommended">
                 <h3>Plano Platinum</h3>
                 <p>Acesso total + mentoria</p>
                 <span>R$1200</span>
-                <a href="#contact" class="btn">Contratar</a>
+                <a href="#contact" class="btn">Contratar Platinum</a>
             </div>
         </div>
     </section>
