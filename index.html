@@ -208,24 +208,27 @@
 
 <!-- Seção de Depoimentos -->
 <section id="testimonials">
-    <h2>Depoimentos</h2>
-    <div class="testimonial-container">
+    <h2>O que nossos clientes dizem</h2>
+    <div class="testimonials">
         <!-- Depoimento 1 -->
-        <div class="testimonial">
-            <p>"Desde que contratei os serviços de gestão de tráfego pago, minhas vendas aumentaram em 300%. A equipe é altamente qualificada, e as estratégias personalizadas são incríveis!"</p>
-            <p class="client-name">- João Silva, Empresário</p>
+        <div class="testimonial-card">
+            <p>"A experiência foi incrível! Com os cursos de Google ADS e Meta ADS, consegui aumentar o tráfego da minha empresa em mais de 40%! Aulas práticas e apoio constante. Recomendo para todos!"</p>
+            <h4>João Silva</h4>
+            <p class="position">Empresário</p>
         </div>
-        
+
         <!-- Depoimento 2 -->
-        <div class="testimonial">
-            <p>"O suporte da equipe foi fundamental para o sucesso das minhas campanhas. Recebi orientações claras e eficazes que me ajudaram a melhorar minha presença online." </p>
-            <p class="client-name">- Maria Oliveira, Proprietária de E-commerce</p>
+        <div class="testimonial-card">
+            <p>"Os cursos são extremamente completos e a qualidade do conteúdo é excelente. Sem contar as aulas de tira-dúvidas, que fizeram toda a diferença no meu aprendizado!"</p>
+            <h4>Maria Oliveira</h4>
+            <p class="position">Especialista em Marketing Digital</p>
         </div>
 
         <!-- Depoimento 3 -->
-        <div class="testimonial">
-            <p>"Eu estava perdido no mundo dos anúncios online, mas a equipe me guiou em cada passo, garantindo que eu obtivesse o melhor retorno sobre investimento possível."</p>
-            <p class="client-name">- Carlos Souza, Consultor de Marketing</p>
+        <div class="testimonial-card">
+            <p>"A mentoria oferecida no plano Platinum me ajudou a entender como aplicar as técnicas de tráfego pago para otimizar os meus resultados. Vale cada centavo!"</p>
+            <h4>Ricardo Lima</h4>
+            <p class="position">Consultor de Tráfego Pago</p>
         </div>
     </div>
 </section>
@@ -234,52 +237,58 @@
 <style>
     #testimonials {
         padding: 60px 20px;
+        background-color: #f4f4f4;
         text-align: center;
-        background-color: #f9f9f9;
     }
 
     #testimonials h2 {
         font-size: 2.5rem;
         color: #0056a8;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
-    .testimonial-container {
+    .testimonials {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
         gap: 30px;
+        flex-wrap: wrap;
     }
 
-    .testimonial {
+    .testimonial-card {
         background: #fff;
-        border: 2px solid #ccc; /* Borda mais espessa */
+        border: 2px solid #ddd;
         border-radius: 10px;
         padding: 20px;
-        max-width: 800px;
+        width: 280px;
         text-align: center;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra mais destacada */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
 
-    .testimonial:hover {
+    .testimonial-card:hover {
         transform: scale(1.05);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
-    .testimonial p {
+    .testimonial-card p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .testimonial-card h4 {
         font-size: 1.2rem;
-        line-height: 1.6;
-        color: #555;
-    }
-
-    .client-name {
-        font-size: 1rem;
         font-weight: bold;
         color: #0056a8;
-        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .testimonial-card .position {
+        font-size: 1rem;
+        color: #777;
     }
 </style>
+
 
 
     <!-- Planos -->
@@ -292,15 +301,15 @@
             <h3>Plano Bronze</h3>
             <p>Acesso básico</p>
             <ul>
-                <li>✅ Curso básico Google ADS</li>
-                <li>✅ Curso Avançado Google ADS</li>
-                <li>✅ Aulas EAD para tirar dúvidas 1h por semana</li>
-                <li>❌ Curso básico Meta ADS</li>
-                <li>❌ Curso Avançado Meta ADS</li>
-                <li>❌ Aula EAD para tirar dúvidas 2 vezes na semana (1 hr)</li>
-                <li>❌ Curso básico Linkedin ADS</li>
-                <li>❌ Curso Avançado de Linkedin ADS</li>
-                <li>❌ MENTORIA sobre os conteúdos do curso</li>
+                <li class="verified">✅ Curso básico Google ADS</li>
+                <li class="verified">✅ Curso Avançado Google ADS</li>
+                <li class="verified">✅ Aulas EAD para tirar dúvidas 1h por semana</li>
+                <li class="not-verified">❌ Curso básico Meta ADS</li>
+                <li class="not-verified">❌ Curso Avançado Meta ADS</li>
+                <li class="not-verified">❌ Aula EAD para tirar dúvidas 2 vezes na semana (1 hr)</li>
+                <li class="not-verified">❌ Curso básico Linkedin ADS</li>
+                <li class="not-verified">❌ Curso Avançado de Linkedin ADS</li>
+                <li class="not-verified">❌ MENTORIA sobre os conteúdos do curso</li>
             </ul>
             <span>R$300</span>
             <a href="#contact" class="btn">Contratar Bronze</a>
@@ -311,15 +320,15 @@
             <h3>Plano Prata</h3>
             <p>Acesso completo</p>
             <ul>
-                <li>✅ Curso básico Google ADS</li>
-                <li>✅ Curso Avançado Google ADS</li>
-                <li>✅ Aulas EAD para tirar dúvidas 1h por semana</li>
-                <li>✅ Curso básico Meta ADS</li>
-                <li>✅ Curso Avançado Meta ADS</li>
-                <li>✅ Aula EAD para tirar dúvidas 2 vezes na semana (1 hr)</li>
-                <li>❌ Curso básico Linkedin ADS</li>
-                <li>❌ Curso Avançado de Linkedin ADS</li>
-                <li>❌ MENTORIA sobre os conteúdos do curso</li>
+                <li class="verified">✅ Curso básico Google ADS</li>
+                <li class="verified">✅ Curso Avançado Google ADS</li>
+                <li class="verified">✅ Aulas EAD para tirar dúvidas 1h por semana</li>
+                <li class="verified">✅ Curso básico Meta ADS</li>
+                <li class="verified">✅ Curso Avançado Meta ADS</li>
+                <li class="verified">✅ Aula EAD para tirar dúvidas 2 vezes na semana (1 hr)</li>
+                <li class="not-verified">❌ Curso básico Linkedin ADS</li>
+                <li class="not-verified">❌ Curso Avançado de Linkedin ADS</li>
+                <li class="not-verified">❌ MENTORIA sobre os conteúdos do curso</li>
             </ul>
             <span>R$600</span>
             <a href="#contact" class="btn">Contratar Prata</a>
@@ -330,15 +339,15 @@
             <h3>Plano Platinum</h3>
             <p>Acesso total + mentoria</p>
             <ul>
-                <li>✅ Curso básico Google ADS</li>
-                <li>✅ Curso Avançado Google ADS</li>
-                <li>✅ Aulas EAD para tirar dúvidas 1h por semana</li>
-                <li>✅ Curso básico Meta ADS</li>
-                <li>✅ Curso Avançado Meta ADS</li>
-                <li>✅ Aula EAD para tirar dúvidas 2 vezes na semana (1 hr)</li>
-                <li>✅ Curso básico Linkedin ADS</li>
-                <li>✅ Curso Avançado de Linkedin ADS</li>
-                <li>✅ MENTORIA sobre os conteúdos do curso</li>
+                <li class="verified">✅ Curso básico Google ADS</li>
+                <li class="verified">✅ Curso Avançado Google ADS</li>
+                <li class="verified">✅ Aulas EAD para tirar dúvidas 1h por semana</li>
+                <li class="verified">✅ Curso básico Meta ADS</li>
+                <li class="verified">✅ Curso Avançado Meta ADS</li>
+                <li class="verified">✅ Aula EAD para tirar dúvidas 2 vezes na semana (1 hr)</li>
+                <li class="verified">✅ Curso básico Linkedin ADS</li>
+                <li class="verified">✅ Curso Avançado de Linkedin ADS</li>
+                <li class="verified">✅ MENTORIA sobre os conteúdos do curso</li>
             </ul>
             <span>R$1200</span>
             <a href="#contact" class="btn">Contratar Platinum</a>
@@ -414,13 +423,14 @@
         margin-bottom: 10px;
     }
 
-    .plan-card ul li.verified {
+    /* Itens verificados e não verificados */
+    .verified {
         color: #28a745; /* Verde para os itens marcados com ✅ */
     }
 
-    .plan-card ul li.not-verified {
+    .not-verified {
         color: #ccc; /* Cinza para os itens marcados com ❌ */
-        text-decoration: line-through;
+        text-decoration: line-through; /* Risco nos itens ❌ */
     }
 
     /* Planos específicos */
@@ -472,6 +482,7 @@
         background: #003f7d;
     }
 </style>
+
 
 
 
