@@ -104,23 +104,37 @@
 
         .plan-card {
             background: #fff;
-            border: 2px solid #ddd;
+            border: 1px solid #ccc; /* Bordas finas */
             border-radius: 10px;
             width: 300px;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra inicial */
             position: relative;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
         }
 
         .plan-card:hover {
             transform: scale(1.05); /* Aumenta o tamanho */
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais destacada */
+            border-color: #0056a8; /* Destaca a borda no hover */
+        }
+
+        .plan-card h3 {
+            margin-bottom: 15px;
+            color: #0056a8;
+        }
+
+        .plan-card span {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            margin: 15px 0;
         }
 
         .plan-card.recommended {
-            border-color: #ff9000;
+            border: 2px solid #ff9000; /* Bordas mais espessas para o recomendado */
             box-shadow: 0 8px 12px rgba(255, 144, 0, 0.4);
         }
 
@@ -198,9 +212,6 @@
     <!-- Planos -->
     <section id="plans">
         <h2>Planos</h2>
-        <div>
-            <img src="https://via.placeholder.com/800x400" alt="Tabela de planos e preços">
-        </div>
         <div class="plans">
             <div class="plan-card">
                 <h3>Plano Bronze</h3>
@@ -242,3 +253,4 @@
     </script>
 </body>
 </html>
+
