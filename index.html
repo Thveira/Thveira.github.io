@@ -12,7 +12,7 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
-            scroll-behavior: smooth;
+            scroll-behavior: smooth; /* Rolagem suave */
         }
 
         header {
@@ -29,17 +29,23 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         header .logo {
             font-size: 1.8rem;
             font-weight: bold;
+            flex: 1;
         }
 
         header ul {
             list-style: none;
             display: flex;
             gap: 15px;
+            margin: 0;
+            padding: 0;
+            flex: 1;
+            justify-content: flex-end;
         }
 
         header ul li a {
@@ -55,61 +61,20 @@
             border-radius: 5px;
         }
 
-        /* Menu responsivo */
-        header .menu-toggle {
-            display: none; /* Escondido em telas grandes */
-            font-size: 2rem;
-            cursor: pointer;
-        }
-
-        header .menu {
-            display: flex;
-        }
-
-        header .menu.open {
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            header nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            header .menu-toggle {
-                display: block; /* Exibir botão hamburguer */
-            }
-
-            header .menu {
-                display: none; /* Escondido inicialmente */
-                flex-direction: column;
-                gap: 10px;
-                width: 100%;
-                background: #0056a8;
-                padding: 10px;
-                border-radius: 5px;
-            }
-
-            header .menu.open {
-                display: flex;
-            }
-        }
-
-        /* Seções */
         section {
             padding: 60px 20px;
             text-align: center;
         }
 
         section h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
             color: #0056a8;
         }
 
         section p {
-            font-size: 1rem;
-            line-height: 1.6;
+            font-size: 1.2rem;
+            line-height: 1.8;
             margin: 20px 0;
         }
 
@@ -134,7 +99,7 @@
             background: #cc7300;
         }
 
-        /* Cartões e planos responsivos */
+        /* Estilo dos planos */
         .plans {
             display: flex;
             flex-wrap: wrap;
@@ -150,38 +115,78 @@
             padding: 20px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
             transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
         }
 
-        @media (max-width: 768px) {
-            .plan-card {
-                width: 90%; /* Ajusta largura para ocupar quase toda a tela */
-            }
-
-            section h2 {
-                font-size: 1.8rem;
-            }
-
-            section p {
-                font-size: 1rem;
-            }
+        .plan-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            border-color: #0056a8;
         }
 
-        /* Footer */
         footer {
             background: #0056a8;
             color: #fff;
             text-align: center;
             padding: 20px;
         }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            header nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header ul {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            header ul li a {
+                padding: 10px;
+                width: 100%; /* Faz os links ocuparem toda a largura */
+            }
+
+            section {
+                padding: 40px 10px;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            section p {
+                font-size: 1rem;
+            }
+
+            .plans {
+                flex-direction: column; /* Exibe os planos em coluna */
+                gap: 20px;
+            }
+
+            .plan-card {
+                width: 100%; /* Faz o card ocupar a largura total */
+                max-width: 400px; /* Limita a largura máxima */
+                margin: 0 auto; /* Centraliza os cards */
+            }
+
+            .testimonial-card {
+                width: 100%; /* Ajusta o tamanho do card */
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header>
         <nav>
             <div class="logo">Gestão de Tráfego</div>
-            <span class="menu-toggle">☰</span>
-            <ul class="menu">
+            <ul>
                 <li><a href="#home">Início</a></li>
                 <li><a href="#about-us">Sobre Nós</a></li>
                 <li><a href="#services">Serviços</a></li>
@@ -191,25 +196,15 @@
         </nav>
     </header>
 
-    <!-- Conteúdo do site -->
+    <!-- Seções principais -->
     <section id="home">
-        <h2>Alavanque as suas vendas!</h2>
+        <h2>Alavanque suas vendas!</h2>
         <p>Transforme seus investimentos em resultados reais com estratégias inteligentes e personalizadas.</p>
-        <img src="mulher-de-tiro-medio-digitando-no-teclado_23-2149160983.avif" alt="Imagem ilustrativa de estratégias de marketing">
+        <img src="https://via.placeholder.com/800x400" alt="Imagem ilustrativa de estratégias de marketing">
         <a href="#plans" class="btn">Conheça nossos planos</a>
     </section>
 
-    <!-- Seções restantes -->
-    <!-- Seções de "Sobre Nós", "Serviços", "Depoimentos" e "Planos" continuam iguais -->
-
-    <script>
-        // Alternar menu responsivo
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.menu');
-
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('open');
-        });
-    </script>
+    <!-- Outras seções -->
+    <!-- ... -->
 </body>
 </html>
