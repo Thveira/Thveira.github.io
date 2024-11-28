@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestão de Tráfego Pago - Potencialize seus Resultados</title>
+    <title>Gestão de Tráfego Pago</title>
     <style>
-        /* Estilos globais */
-        body {
-            font-family: Arial, sans-serif;
+        /* Estilo Global */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            scroll-behavior: smooth; /* Rolagem suave para navegadores compatíveis */
+            box-sizing: border-box;
         }
 
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Cabeçalho */
         header {
-            background: #0056a8;
+            background-color: #0056a8;
             color: #fff;
-            padding: 20px 10px;
+            padding: 10px 20px;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -29,6 +34,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         header .logo {
@@ -42,19 +48,23 @@
             gap: 15px;
         }
 
+        header ul li {
+            margin: 0;
+        }
+
         header ul li a {
-            color: #fff;
             text-decoration: none;
-            font-weight: bold;
+            color: #fff;
             padding: 10px 15px;
-            transition: background 0.3s;
+            transition: background 0.3s ease;
         }
 
         header ul li a:hover {
-            background: #004080;
+            background-color: #004080;
             border-radius: 5px;
         }
 
+        /* Seções */
         section {
             padding: 60px 20px;
             text-align: center;
@@ -62,31 +72,28 @@
 
         section h2 {
             font-size: 2.5rem;
-            margin-bottom: 20px;
             color: #0056a8;
+            margin-bottom: 20px;
         }
 
         section p {
             font-size: 1.2rem;
-            line-height: 1.8;
-            margin: 20px 0;
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
 
         section img {
             max-width: 100%;
+            height: auto;
             border-radius: 10px;
             margin: 20px 0;
         }
 
         section a.btn {
-            display: block; /* Faz o botão ser exibido como bloco */
-            margin-left: auto; /* Alinha à esquerda automaticamente */
-            margin-right: auto; /* Alinha à direita automaticamente */
-            text-align: center; /* Centraliza o texto dentro do botão */
-            width: max-content; /* Ajusta o botão para o conteúdo */
+            display: inline-block;
             background: #ff9000;
             color: #fff;
-            padding: 12px 24px;
+            padding: 10px 20px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
@@ -97,7 +104,7 @@
             background: #cc7300;
         }
 
-        /* Estilo dos planos */
+        /* Planos */
         .plans {
             display: flex;
             flex-wrap: wrap;
@@ -107,371 +114,112 @@
 
         .plan-card {
             background: #fff;
-            border: 1px solid #ccc; /* Bordas finas */
+            border: 1px solid #ccc;
             border-radius: 10px;
             width: 300px;
-            padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra inicial */
-            position: relative;
-            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .plan-card:hover {
-            transform: scale(1.05); /* Aumenta o tamanho */
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais destacada */
-            border-color: #0056a8; /* Destaca a borda no hover */
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
 
-        .plan-card h3 {
-            margin-bottom: 15px;
-            color: #0056a8;
-        }
-
-        .plan-card span {
-            display: block;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #333;
-            margin: 15px 0;
-        }
-
-        .plan-card.recommended {
-            border: 2px solid #ff9000; /* Bordas mais espessas para o recomendado */
-            box-shadow: 0 8px 12px rgba(255, 144, 0, 0.4);
-        }
-
-        .plan-card.recommended::before {
-            content: "Recomendado";
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #ff9000;
-            color: #fff;
-            font-size: 0.8rem;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-weight: bold;
-        }
-
+        /* Rodapé */
         footer {
-            background: #0056a8;
+            background-color: #0056a8;
             color: #fff;
-            text-align: center;
             padding: 20px;
+            text-align: center;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header ul {
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+            }
+
+            header ul li a {
+                padding: 10px 15px;
+                width: 100%;
+                text-align: left;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            section p {
+                font-size: 1rem;
+            }
+
+            .plans {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .plan-card {
+                width: 100%;
+                max-width: 350px;
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
 <body>
-
     <!-- Cabeçalho -->
     <header>
         <nav>
             <div class="logo">Gestão de Tráfego</div>
             <ul>
                 <li><a href="#home">Início</a></li>
-                <li><a href="#about-us">Sobre Nós</a></li>
+                <li><a href="#about">Sobre Nós</a></li>
                 <li><a href="#services">Serviços</a></li>
-                <li><a href="#testimonials">Depoimentos</a></li>
                 <li><a href="#plans">Planos</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Seção Hero -->
+    <!-- Seções -->
     <section id="home">
-        <h2>Alavanque as suas vendas!</h2>
-        <p>Transforme seus investimentos em resultados reais com estratégias inteligentes e personalizadas.</p>
-        <img src="mulher-de-tiro-medio-digitando-no-teclado_23-2149160983.avif" alt="Imagem ilustrativa de estratégias de marketing">
+        <h2>Transforme seus resultados</h2>
+        <p>Invista em estratégias de tráfego pago para potencializar o alcance e as conversões do seu negócio.</p>
+        <img src="https://via.placeholder.com/800x400" alt="Imagem de tráfego pago">
         <a href="#plans" class="btn">Conheça nossos planos</a>
     </section>
 
-    <!-- Sobre Nós -->
-    <section id="about-us">
-        <h2>Sobre Nós</h2>
-        <p>Somos especialistas em gestão de tráfego pago, oferecendo soluções que geram resultados reais. Com anos de experiência no mercado digital, ajudamos empresas a atingirem suas metas de forma eficiente.</p>
-        <img src="https://via.placeholder.com/800x400" alt="Imagem da equipe trabalhando">
-        <a href="#services" class="btn">Saiba mais sobre nós</a>
+    <section id="plans">
+        <h2>Planos</h2>
+        <div class="plans">
+            <div class="plan-card">
+                <h3>Plano Básico</h3>
+                <p>Ideal para quem está começando.</p>
+                <p><strong>R$ 499/mês</strong></p>
+                <a href="#" class="btn">Contratar</a>
+            </div>
+            <div class="plan-card">
+                <h3>Plano Avançado</h3>
+                <p>Para quem busca resultados ainda maiores.</p>
+                <p><strong>R$ 999/mês</strong></p>
+                <a href="#" class="btn">Contratar</a>
+            </div>
+        </div>
     </section>
 
-    <!-- Serviços -->
-    <section id="services">
-        <h2>Nossos Serviços</h2>
-        <p>Gerenciamento de campanhas no Google Ads, Meta Ads (Facebook e Instagram) e LinkedIn Ads.</p>
-        <img src="laboratorio-de-informatica-moderno-e-equipado_23-2149241215">
-        <a href="#testimonials" class="btn">Veja o que nossos clientes dizem</a>
-    </section>
- </
-
-    <!-- Depoimentos -->
-
-<!-- Seção de Depoimentos -->
-<section id="testimonials">
-    <h2>O que nossos clientes dizem</h2>
-    <div class="testimonials">
-        <!-- Depoimento 1 -->
-        <div class="testimonial-card">
-            <p>"A experiência foi incrível! Com os cursos de Google ADS e Meta ADS, consegui aumentar o tráfego da minha empresa em mais de 40%! Aulas práticas e apoio constante. Recomendo para todos!"</p>
-            <h4>João Silva</h4>
-            <p class="position">Empresário</p>
-        </div>
-
-        <!-- Depoimento 2 -->
-        <div class="testimonial-card">
-            <p>"Os cursos são extremamente completos e a qualidade do conteúdo é excelente. Sem contar as aulas de tira-dúvidas, que fizeram toda a diferença no meu aprendizado!"</p>
-            <h4>Maria Oliveira</h4>
-            <p class="position">Especialista em Marketing Digital</p>
-        </div>
-
-        <!-- Depoimento 3 -->
-        <div class="testimonial-card">
-            <p>"A mentoria oferecida no plano Platinum me ajudou a entender como aplicar as técnicas de tráfego pago para otimizar os meus resultados. Vale cada centavo!"</p>
-            <h4>Ricardo Lima</h4>
-            <p class="position">Consultor de Tráfego Pago</p>
-        </div>
-    </div>
-</section>
-
-<!-- Estilo para os Depoimentos -->
-<style>
-    #testimonials {
-        padding: 60px 20px;
-        background-color: #f4f4f4;
-        text-align: center;
-    }
-
-    #testimonials h2 {
-        font-size: 2.5rem;
-        color: #0056a8;
-        margin-bottom: 40px;
-    }
-
-    .testimonials {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        flex-wrap: wrap;
-    }
-
-    .testimonial-card {
-        background: #fff;
-        border: 4px solid #0056a8; /* Moldura azul mais espessa */
-        border-radius: 15px; /* Bordas arredondadas */
-        padding: 20px;
-        width: 280px;
-        text-align: center;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
-
-    .testimonial-card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
-    }
-
-    .testimonial-card p {
-        font-size: 1.1rem;
-        margin-bottom: 20px;
-        color: #333;
-    }
-
-    .testimonial-card h4 {
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #0056a8;
-        margin-bottom: 5px;
-    }
-
-    .testimonial-card .position {
-        font-size: 1rem;
-        color: #777;
-    }
-</style>
-
-    <!-- Planos -->
-<!-- Seção de Planos -->
-<section id="plans">
-    <h2>Planos</h2>
-    <div class="plans">
-        <!-- Plano Bronze -->
-        <div class="plan-card bronze">
-            <h3>Plano Bronze</h3>
-            <p>Acesso básico</p>
-            <span class="price">R$300</span>
-            <ul>
-                <li>✅ - Curso básico Google ADS</li>
-                <li>✅ - Curso Avançado Google ADS</li>
-                <li>✅ - Aulas EAD para tira dúvidas 1h por semana</li>
-                <li class="crossed">❌ - Curso básico Meta ADS</li>
-                <li class="crossed">❌ - Curso Avançado Meta ADS</li>
-                <li class="crossed">❌ - Aula EAD para tirar duvidas 2 vezes na semana (1 hr de tira duvidas)</li>
-                <li class="crossed">❌ - Curso básico Linkedin ADS</li>
-                <li class="crossed">❌ - Curso Avançado de Linkedin ADS</li>
-                <li class="crossed">❌ - MENTORIA sobre os conteúdos do curso</li>
-            </ul>
-            <a href="#contact" class="btn">Contratar Bronze</a>
-        </div>
-
-        <!-- Plano Prata -->
-        <div class="plan-card prata">
-            <h3>Plano Prata</h3>
-            <p>Acesso completo</p>
-            <span class="price">R$600</span>
-            <ul>
-                <li>✅ - Curso básico Google ADS</li>
-                <li>✅ - Curso Avançado Google ADS</li>
-                <li>✅ - Aulas EAD para tira dúvidas 1h por semana</li>
-                <li>✅ - Curso básico Meta ADS</li>
-                <li>✅ - Curso Avançado Meta ADS</li>
-                <li>✅ - Aula EAD para tirar dúvidas 2 vezes na semana (1 hr de tira dúvidas)</li>
-                <li class="crossed">❌ - Curso básico Linkedin ADS</li>
-                <li class="crossed">❌ - Curso Avançado de Linkedin ADS</li>
-                <li class="crossed">❌ - MENTORIA sobre os conteúdos do curso</li>
-            </ul>
-            <a href="#contact" class="btn">Contratar Prata</a>
-        </div>
-
-        <!-- Plano Platinum (Recomendado) -->
-        <div class="plan-card platinum recommended">
-            <h3>Plano Platinum</h3>
-            <p>Acesso total + mentoria</p>
-            <span class="price">R$1200</span>
-            <ul>
-                <li>✅ - Curso básico Google ADS</li>
-                <li>✅ - Curso Avançado Google ADS</li>
-                <li>✅ - Aulas EAD para tira dúvidas 1h por semana</li>
-                <li>✅ - Curso básico Meta ADS</li>
-                <li>✅ - Curso Avançado Meta ADS</li>
-                <li>✅ - Aula EAD para tirar dúvidas 2 vezes na semana (1 hr de tira dúvidas)</li>
-                <li>✅ - Curso básico Linkedin ADS</li>
-                <li>✅ - Curso Avançado de Linkedin ADS</li>
-                <li>✅ - MENTORIA sobre os conteúdos do curso</li>
-            </ul>
-            <a href="#contact" class="btn">Contratar Platinum</a>
-        </div>
-    </div>
-</section>
-
-<!-- Estilos para os Planos -->
-<style>
-    .plans {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        flex-wrap: wrap;
-    }
-
-    .plan-card {
-        background: #fff;
-        border: 2px solid #ccc;
-        border-radius: 10px;
-        padding: 20px;
-        width: 280px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        position: relative;
-    }
-
-    .plan-card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    .plan-card h3 {
-        font-size: 1.8rem;
-        color: #0056a8;
-        margin-bottom: 20px;
-    }
-
-    .plan-card .price {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #333;
-        margin: 10px 0;
-    }
-
-    .plan-card ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    .plan-card ul li {
-        font-size: 1.1rem;
-        margin-bottom: 10px;
-        color: #555;
-    }
-
-    .plan-card .crossed {
-        text-decoration: line-through;
-        color: #999; /* Cor do texto riscado */
-    }
-
-    .plan-card.recommended {
-        border: 2px solid #ff9000;
-        box-shadow: 0 8px 12px rgba(255, 144, 0, 0.4);
-    }
-
-    .plan-card.recommended::before {
-        content: "Recomendado";
-        position: absolute;
-        top: -15px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #ff9000;
-        color: #fff;
-        font-size: 0.8rem;
-        padding: 5px 10px;
-        border-radius: 15px;
-        font-weight: bold;
-    }
-
-    /* Cores para cada plano */
-    .plan-card.bronze {
-        border-color: #cd7f32;
-        background-color: #f6e1b3;
-    }
-
-    .plan-card.prata {
-        border-color: #b0b0b0;
-        background-color: #dcdcdc; /* Ajuste da cor para o plano prata */
-    }
-
-    .plan-card.platinum {
-        border-color: #0056a8;
-        background-color: #d0e7ff;
-    }
-
-    .btn {
-        display: block;
-        background-color: #0056a8;
-        color: #fff;
-        padding: 12px 24px;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 5px;
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .btn:hover {
-        background-color: #004080;
-    }
-</style>
-
-
-
-    <!-- JavaScript para rolagem suave -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Gestão de Tráfego - Todos os direitos reservados</p>
+    </footer>
 </body>
 </html>
