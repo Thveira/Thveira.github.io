@@ -202,7 +202,11 @@
         <img src="laboratorio-de-informatica-moderno-e-equipado_23-2149241215">
         <a href="#testimonials" class="btn">Veja o que nossos clientes dizem</a>
     </section>
- 
+ </
+
+    <!-- Depoimentos -->
+<section id="testimonials">
+    <h2>Depoimentos</h2>
 
     <!-- Carrossel de Depoimentos -->
     <div class="testimonial-carousel">
@@ -231,6 +235,11 @@
 
 <!-- Estilos para o Carrossel -->
 <style>
+    #testimonials {
+        text-align: center;
+        margin-top: 50px;
+    }
+
     .testimonial-carousel {
         display: flex;
         overflow: hidden;
@@ -238,6 +247,7 @@
         width: 100%;
         max-width: 800px;
         margin: 20px auto;
+        position: relative;
     }
 
     .testimonial-item {
@@ -270,6 +280,22 @@
     .carousel-navigation button:hover {
         background-color: #004080;
     }
+
+    /* Centralizar e melhorar a responsividade */
+    .testimonial-item p {
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+
+    /* Adicionar uma leve sombra ao redor dos depoimentos para destaque */
+    .testimonial-item {
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
 </style>
 
 <!-- JavaScript para Carrossel de Depoimentos -->
@@ -297,6 +323,7 @@
     // Inicializar o primeiro depoimento
     showTestimonial(currentIndex);
 </script>
+
 
     <!-- Planos -->
 <section id="plans">
