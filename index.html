@@ -10,13 +10,13 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://img.freepik.com/fotos-gratis/pessoas-que-trabalham-em-equipe_23-2149136853.jpg?t=st=1732817845~exp=1732821445~hmac=bf63523435ec7bef3147c10b2b37468817bb12bcab9d37c630084a56316de234&w=1380'); /* Substitua pelo caminho da sua imagem */
-            background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
-            background-repeat: no-repeat; /* Evita repetição da imagem */
-            background-attachment: fixed; /* Faz a imagem permanecer fixa enquanto rola a página */
-            background-position: center; /* Centraliza a imagem */
+            background-image: url('https://img.freepik.com/fotos-gratis/pessoas-que-trabalham-em-equipe_23-2149136853.jpg?t=st=1732817845~exp=1732821445~hmac=bf63523435ec7bef3147c10b2b37468817bb12bcab9d37c630084a56316de234&w=1380');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
             color: #333;
-            scroll-behavior: smooth; /* Rolagem suave para navegadores compatíveis */
+            scroll-behavior: smooth;
         }
 
         header {
@@ -38,7 +38,7 @@
         header .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
 
         header ul {
@@ -53,7 +53,7 @@
             font-weight: bold;
             padding: 10px 15px;
             transition: background 0.3s;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         header ul li a:hover {
@@ -63,7 +63,7 @@
 
         /* Efeito de sombra no texto */
         h2, p {
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Aumenta a sombra no título e parágrafos */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
         }
 
         section {
@@ -73,27 +73,27 @@
         }
 
         section h2 {
-            font-size: 3rem; /* Aumenta o tamanho do título */
+            font-size: 3rem;
             margin-bottom: 20px;
-            color: #2c3e50; /* Azul escuro para maior contraste */
+            color: #2c3e50;
             font-weight: bold;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Aumenta a sombra para destaque */
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
         }
 
         section p {
-            font-size: 1.8rem; /* Aumenta o tamanho da fonte do parágrafo */
+            font-size: 1.8rem;
             line-height: 1.8;
             margin: 20px 0;
-            color: #2c3e50; /* Azul escuro para maior contraste */
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Sombra mais forte para tornar o texto legível */
+            color: #2c3e50;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
         }
 
         section img {
             max-width: 100%;
             border-radius: 10px;
             margin: 20px 0;
-            border: 5px solid #ccc; /* Moldura ao redor da imagem */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombramento sutil */
+            border: 5px solid #ccc;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
 
         section a.btn {
@@ -109,7 +109,7 @@
             font-weight: bold;
             border-radius: 5px;
             transition: background 0.3s, transform 0.3s;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra no botão */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         section a.btn:hover {
@@ -117,7 +117,7 @@
         }
 
         section a.btn:active {
-            transform: scale(0.95); /* Efeito de "clicado" */
+            transform: scale(0.95);
         }
 
         /* Efeito pulsante no botão CTA */
@@ -137,7 +137,55 @@
         }
 
         section a.btn {
-            animation: pulse 1.5s infinite; /* Aplicando animação de pulsação */
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Seção interativa - Por que contratar um gestor */
+        #why-hire {
+            background-color: #fff;
+            padding: 60px 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 60px;
+        }
+
+        #why-hire h2 {
+            font-size: 2.5rem;
+            color: #0056a8;
+            margin-bottom: 40px;
+        }
+
+        #why-hire ul {
+            list-style: none;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-items: center;
+        }
+
+        #why-hire ul li {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        #why-hire ul li:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #why-hire ul li h3 {
+            font-size: 1.5rem;
+            color: #0056a8;
+            margin-bottom: 10px;
+        }
+
+        #why-hire ul li p {
+            font-size: 1.1rem;
+            color: #333;
         }
 
         /* Estilo dos planos */
@@ -150,21 +198,20 @@
 
         .plan-card {
             background: #fff;
-            border: 1px solid #ccc; /* Bordas finas */
+            border: 1px solid #ccc;
             border-radius: 10px;
             width: 300px;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             position: relative;
             transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra no texto dos planos */
         }
 
         .plan-card:hover {
-            transform: scale(1.05); /* Aumenta o tamanho */
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais destacada */
-            border-color: #0056a8; /* Destaca a borda no hover */
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            border-color: #0056a8;
         }
 
         .plan-card h3 {
@@ -181,7 +228,7 @@
         }
 
         .plan-card.recommended {
-            border: 2px solid #ff9000; /* Bordas mais espessas para o recomendado */
+            border: 2px solid #ff9000;
             box-shadow: 0 8px 12px rgba(255, 144, 0, 0.4);
         }
 
@@ -199,56 +246,7 @@
             font-weight: bold;
         }
 
-        footer {
-            background: #0056a8;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Depoimentos */
-        #testimonials {
-            padding: 60px 20px;
-            background-color: #fff; /* Fundo branco clean */
-            text-align: center;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
-        }
-
-        #testimonials h2 {
-            font-size: 2.5rem;
-            color: #0056a8;
-            margin-bottom: 40px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra leve no título */
-        }
-
-        .testimonials {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra do card */
-            width: 300px;
-            text-align: center;
-        }
-
-        .testimonial-card p {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-
-        .testimonial-card footer {
-            font-size: 1rem;
-            color: #333;
-            font-weight: bold;
-        }
-
+        /* WhatsApp CTA interativo */
         .whatsapp-btn {
             display: inline-block;
             background: #25d366;
@@ -259,7 +257,8 @@
             font-size: 1.2rem;
             font-weight: bold;
             transition: background-color 0.3s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra no botão */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: pulse 1.5s infinite;
         }
 
         .whatsapp-btn:hover {
@@ -274,6 +273,7 @@
             <div class="logo">Gestão de Tráfego Pago</div>
             <ul>
                 <li><a href="#about">Sobre</a></li>
+                <li><a href="#why-hire">Por que contratar</a></li>
                 <li><a href="#plans">Planos</a></li>
                 <li><a href="#testimonials">Depoimentos</a></li>
                 <li><a href="#contact">Contato</a></li>
@@ -284,8 +284,27 @@
     <section id="about">
         <h2>Potencialize seus Resultados</h2>
         <p>Com a gestão de tráfego pago, você atinge novos patamares em vendas e conversões!</p>
-        <img src="Tráfego Pago para Anúncios Online_ Como Aumentar Suas Vendas Rapidamente.jpg" >
+        <img src="https://via.placeholder.com/600x400" alt="Imagem sobre tráfego pago">
         <a href="#contact" class="btn">Saiba Mais</a>
+    </section>
+
+    <!-- Seção interativa "Por que contratar um gestor de tráfego pago" -->
+    <section id="why-hire">
+        <h2>Por que contratar um gestor de tráfego pago?</h2>
+        <ul>
+            <li>
+                <h3>Aumento de Vendas</h3>
+                <p>Com uma gestão estratégica de anúncios, aumentamos suas vendas rapidamente.</p>
+            </li>
+            <li>
+                <h3>Otimização de Campanhas</h3>
+                <p>Com monitoramento contínuo, ajustamos suas campanhas para resultados melhores.</p>
+            </li>
+            <li>
+                <h3>Economia de Tempo</h3>
+                <p>Deixe que um especialista cuide dos anúncios enquanto você foca no seu negócio.</p>
+            </li>
+        </ul>
     </section>
 
     <section id="plans">
@@ -328,3 +347,4 @@
     </footer>
 </body>
 </html>
+
