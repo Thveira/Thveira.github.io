@@ -61,33 +61,31 @@
             border-radius: 5px;
         }
 
+        /* Efeito de sombra no texto */
+        h2, p {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Aumenta a sombra no título e parágrafos */
+        }
+
         section {
             padding: 60px 20px;
             text-align: center;
             position: relative;
         }
 
-        /* Adicionando fundo semitransparente atrás do texto */
-        .text-overlay {
-            background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com 50% de opacidade */
-            padding: 20px;
-            border-radius: 10px;
-            display: inline-block;
-        }
-
         section h2 {
-            font-size: 2.5rem;
+            font-size: 3rem; /* Aumenta o tamanho do título */
             margin-bottom: 20px;
             color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra no título */
+            font-weight: bold;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Aumenta a sombra para destaque */
         }
 
         section p {
-            font-size: 1.2rem;
+            font-size: 1.5rem; /* Aumenta o tamanho da fonte do parágrafo */
             line-height: 1.8;
             margin: 20px 0;
             color: #fff;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra no parágrafo */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Sombra mais forte para tornar o texto legível */
         }
 
         section img {
@@ -99,11 +97,11 @@
         }
 
         section a.btn {
-            display: block; /* Faz o botão ser exibido como bloco */
-            margin-left: auto; /* Alinha à esquerda automaticamente */
-            margin-right: auto; /* Alinha à direita automaticamente */
-            text-align: center; /* Centraliza o texto dentro do botão */
-            width: max-content; /* Ajusta o botão para o conteúdo */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: max-content;
             background: #ff9000;
             color: #fff;
             padding: 12px 24px;
@@ -236,34 +234,26 @@
             padding: 20px;
             border-radius: 10px;
             width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .testimonial-card p {
-            font-style: italic;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-            color: #333;
-            line-height: 1.5;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
         }
 
         .testimonial-card footer {
-            font-size: 1rem;
-            color: #0056a8;
-            font-weight: bold;
+            font-style: italic;
+            color: #555;
+            margin-top: 20px;
         }
 
         .whatsapp-btn {
             display: inline-block;
-            background-color: #25d366;
+            background: #25d366;
             color: white;
             padding: 10px 25px;
-            font-size: 1.1rem;
-            border-radius: 25px;
             text-decoration: none;
-            margin-top: 20px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
             transition: background-color 0.3s;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra no texto do botão */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra no botão */
         }
 
         .whatsapp-btn:hover {
@@ -287,9 +277,7 @@
 
     <section id="about">
         <h2>Potencialize seus Resultados</h2>
-        <div class="text-overlay">
-            <p>Com a gestão de tráfego pago, você atinge novos patamares em vendas e conversões!</p>
-        </div>
+        <p>Com a gestão de tráfego pago, você atinge novos patamares em vendas e conversões!</p>
         <img src="https://via.placeholder.com/600x400" alt="Imagem sobre tráfego pago">
         <a href="#contact" class="btn">Saiba Mais</a>
     </section>
@@ -320,11 +308,11 @@
         <div class="testimonials">
             <div class="testimonial-card">
                 <p>"A gestão de tráfego pago transformou nosso negócio!"</p>
-                <footer>- João Silva, Empresa X</footer>
+                <footer>- João Silva</footer>
             </div>
             <div class="testimonial-card">
                 <p>"Nosso ROI aumentou significativamente com o trabalho de tráfego pago."</p>
-                <footer>- Maria Souza, Empresa Y</footer>
+                <footer>- Maria Souza</footer>
             </div>
         </div>
     </section>
