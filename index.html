@@ -38,6 +38,7 @@
         header .logo {
             font-size: 1.8rem;
             font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra no texto */
         }
 
         header ul {
@@ -52,6 +53,7 @@
             font-weight: bold;
             padding: 10px 15px;
             transition: background 0.3s;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra no texto */
         }
 
         header ul li a:hover {
@@ -68,12 +70,14 @@
             font-size: 2.5rem;
             margin-bottom: 20px;
             color: #0056a8;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra no título */
         }
 
         section p {
             font-size: 1.2rem;
             line-height: 1.8;
             margin: 20px 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra no parágrafo */
         }
 
         section img {
@@ -97,6 +101,7 @@
             font-weight: bold;
             border-radius: 5px;
             transition: background 0.3s, transform 0.3s;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra no botão */
         }
 
         section a.btn:hover {
@@ -145,6 +150,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra inicial */
             position: relative;
             transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra no texto dos planos */
         }
 
         .plan-card:hover {
@@ -204,6 +210,7 @@
             font-size: 2.5rem;
             color: #0056a8;
             margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra no título */
         }
 
         .testimonials {
@@ -222,6 +229,7 @@
             text-align: center;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra no texto dos depoimentos */
         }
 
         .testimonial-card:hover {
@@ -229,25 +237,6 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
         }
 
-        .testimonial-card p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .testimonial-card h4 {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #0056a8;
-            margin-bottom: 5px;
-        }
-
-        .testimonial-card span {
-            font-size: 1rem;
-            color: #888;
-        }
-
-        /* Botão de contato */
         .whatsapp-btn {
             display: inline-block;
             background-color: #25d366;
@@ -258,6 +247,7 @@
             text-decoration: none;
             margin-top: 20px;
             transition: background-color 0.3s;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra no texto do botão */
         }
 
         .whatsapp-btn:hover {
@@ -271,41 +261,38 @@
         <nav>
             <div class="logo">Gestão de Tráfego Pago</div>
             <ul>
-                <li><a href="#services">Serviços</a></li>
+                <li><a href="#about">Sobre</a></li>
                 <li><a href="#plans">Planos</a></li>
                 <li><a href="#testimonials">Depoimentos</a></li>
-                <li><a href="#contact" class="btn">Contato</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="services">
-        <h2>Potencialize Seus Resultados com Tráfego Pago</h2>
-        <p>Transforme sua presença online e alcance seu público de maneira eficaz com nossas estratégias de tráfego pago. Aumente as conversões e vendas através de campanhas otimizadas no Google, Facebook e Instagram.</p>
-        <img src="https://img.freepik.com/fotos-gratis/homem-sorridente-de-tiro-medio-tomando-notas_23-2149546194.jpg?ga=GA1.1.2046994419.1732753230&semt=ais_hybrid" alt="Imagem do serviço">
-        <a href="https://wa.me/5551995335001?text=Ol%C3%A1!%20Que%20bom%20que%20voc%C3%AA%20est%C3%A1%20aqui!%20Me%20mande%20mensagem%20para%20conversarmos%20melhor." class="btn">Fale conosco no WhatsApp</a>
+    <section id="about">
+        <h2>Potencialize seus Resultados</h2>
+        <p>Com a gestão de tráfego pago, você atinge novos patamares em vendas e conversões!</p>
+        <img src="https://via.placeholder.com/600x400" alt="Imagem sobre tráfego pago">
+        <a href="#contact" class="btn">Saiba Mais</a>
     </section>
 
     <section id="plans">
-        <h2>Escolha o Plano Ideal para Seu Negócio</h2>
+        <h2>Escolha o Plano Ideal</h2>
         <div class="plans">
+            <div class="plan-card">
+                <h3>Plano Básico</h3>
+                <span>R$ 499/mês</span>
+                <p>Ideal para pequenas empresas que querem começar no tráfego pago.</p>
+            </div>
             <div class="plan-card recommended">
-                <h3>Plano Iniciante</h3>
+                <h3>Plano Avançado</h3>
                 <span>R$ 999/mês</span>
-                <p>Perfeito para quem está começando no tráfego pago.</p>
-                <a href="https://wa.me/5551995335001?text=Ol%C3%A1!%20Que%20bom%20que%20voc%C3%AA%20est%C3%A1%20aqui!%20Me%20mande%20mensagem%20para%20conversarmos%20melhor." class="btn">Contratar</a>
+                <p>Para empresas que desejam otimizar e escalar suas campanhas.</p>
             </div>
             <div class="plan-card">
                 <h3>Plano Profissional</h3>
-                <span>R$ 2.499/mês</span>
-                <p>Para empresas que já têm experiência com tráfego pago.</p>
-                <a href="https://wa.me/5551995335001?text=Ol%C3%A1!%20Que%20bom%20que%20voc%C3%AA%20est%C3%A1%20aqui!%20Me%20mande%20mensagem%20para%20conversarmos%20melhor." class="btn">Contratar</a>
-            </div>
-            <div class="plan-card">
-                <h3>Plano Empresarial</h3>
-                <span>R$ 5.499/mês</span>
-                <p>Para empresas que buscam um crescimento acelerado.</p>
-                <a href="https://wa.me/5551995335001?text=Ol%C3%A1!%20Que%20bom%20que%20voc%C3%AA%20est%C3%A1%20aqui!%20Me%20mande%20mensagem%20para%20conversarmos%20melhor." class="btn">Contratar</a>
+                <span>R$ 1.499/mês</span>
+                <p>Para grandes empresas que precisam de estratégias avançadas e personalizadas.</p>
             </div>
         </div>
     </section>
@@ -314,20 +301,18 @@
         <h2>O que nossos clientes dizem</h2>
         <div class="testimonials">
             <div class="testimonial-card">
-                <p>"A gestão de tráfego pago nos ajudou a triplicar nossas vendas em apenas 3 meses!"</p>
-                <h4>João Silva</h4>
-                <span>CEO da Startup X</span>
+                <p>"A gestão de tráfego pago transformou nosso negócio!"</p>
+                <footer>- João Silva, Empresa X</footer>
             </div>
             <div class="testimonial-card">
-                <p>"Os resultados foram além das nossas expectativas. Super recomendo!"</p>
-                <h4>Maria Oliveira</h4>
-                <span>Marketing Diretor</span>
+                <p>"Nosso ROI aumentou significativamente com o trabalho de tráfego pago."</p>
+                <footer>- Maria Souza, Empresa Y</footer>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Gestão de Tráfego Pago | Todos os direitos reservados</p>
+        <a href="https://wa.me/5511999999999" class="whatsapp-btn">Fale Conosco no WhatsApp</a>
     </footer>
 </body>
 </html>
