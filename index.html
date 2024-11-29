@@ -64,12 +64,21 @@
         section {
             padding: 60px 20px;
             text-align: center;
+            position: relative;
+        }
+
+        /* Adicionando fundo semitransparente atrás do texto */
+        .text-overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com 50% de opacidade */
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
         }
 
         section h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #0056a8;
+            color: #fff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra no título */
         }
 
@@ -77,6 +86,7 @@
             font-size: 1.2rem;
             line-height: 1.8;
             margin: 20px 0;
+            color: #fff;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra no parágrafo */
         }
 
@@ -222,19 +232,25 @@
 
         .testimonial-card {
             background: #fff;
-            border: 4px solid #0056a8; /* Moldura azul mais espessa */
-            border-radius: 15px; /* Bordas arredondadas */
+            border: 4px solid #0056a8; /* Moldura azul */
             padding: 20px;
-            width: 280px;
-            text-align: center;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra no texto dos depoimentos */
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .testimonial-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .testimonial-card footer {
+            font-size: 1rem;
+            color: #0056a8;
+            font-weight: bold;
         }
 
         .whatsapp-btn {
@@ -271,7 +287,9 @@
 
     <section id="about">
         <h2>Potencialize seus Resultados</h2>
-        <p>Com a gestão de tráfego pago, você atinge novos patamares em vendas e conversões!</p>
+        <div class="text-overlay">
+            <p>Com a gestão de tráfego pago, você atinge novos patamares em vendas e conversões!</p>
+        </div>
         <img src="https://via.placeholder.com/600x400" alt="Imagem sobre tráfego pago">
         <a href="#contact" class="btn">Saiba Mais</a>
     </section>
