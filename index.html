@@ -61,11 +61,6 @@
             border-radius: 5px;
         }
 
-        /* Efeito de sombra no texto */
-        h2, p {
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-        }
-
         section {
             padding: 60px 20px;
             text-align: center;
@@ -75,16 +70,16 @@
         section h2 {
             font-size: 3rem;
             margin-bottom: 20px;
-            color: #1e2a6d; /* Cor do título mais forte */
+            color: #1e2a6d;
             font-weight: bold;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
         }
 
         section p {
-            font-size: 2rem; /* Aumento do tamanho da fonte */
+            font-size: 2rem;
             line-height: 1.8;
             margin: 20px 0;
-            color: #2e3d69; /* Cor da frase abaixo do título, mais escura */
+            color: #2e3d69;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
         }
 
@@ -120,7 +115,6 @@
             transform: scale(0.95);
         }
 
-        /* Efeito pulsante no botão CTA */
         @keyframes pulse {
             0% {
                 transform: scale(1);
@@ -140,7 +134,6 @@
             animation: pulse 1.5s infinite;
         }
 
-        /* Seção interativa - Por que contratar um gestor */
         #why-hire {
             background-color: #fff;
             padding: 60px 20px;
@@ -151,7 +144,7 @@
 
         #why-hire h2 {
             font-size: 2.5rem;
-            color: #0056a8; /* Cor do título */
+            color: #0056a8;
             margin-bottom: 40px;
         }
 
@@ -179,16 +172,15 @@
 
         #why-hire ul li h3 {
             font-size: 1.5rem;
-            color: #1e2a6d; /* Cor do subtítulo */
+            color: #1e2a6d;
             margin-bottom: 10px;
         }
 
         #why-hire ul li p {
             font-size: 1.1rem;
-            color: #444; /* Frase em cinza escuro */
+            color: #444;
         }
 
-        /* Estilo dos planos */
         .plans {
             display: flex;
             flex-wrap: wrap;
@@ -254,45 +246,24 @@
             font-size: 1.2rem;
             text-decoration: none;
             border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-block;
             transition: background-color 0.3s, transform 0.3s;
         }
 
         .plan-btn:hover {
             background-color: #128c7e;
+            transform: scale(1.05);
         }
 
         .plan-btn:active {
             transform: scale(0.95);
         }
 
-        /* Estilo dos depoimentos */
-        .testimonials {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 60px;
-        }
-
-        .testimonial-card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .testimonial-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
-
         footer {
-            text-align: center;
-            padding: 20px;
             background-color: #0056a8;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
         }
 
         footer a.whatsapp-btn {
@@ -336,10 +307,9 @@
         <h2>Potencialize seus Resultados</h2>
         <p>Com a gestão de tráfego pago, você atinge novos patamares em vendas e conversões!</p>
         <img src="https://i.pinimg.com/236x/4a/f5/f1/4af5f103996d884d5d7b5629e220f39f.jpg">
-        <a href="#contact" class="btn">Saiba Mais</a>
+        <a href="#plans" class="btn">Saiba Mais</a>
     </section>
 
-    <!-- Seção interativa "Por que contratar um gestor de tráfego pago" -->
     <section id="why-hire">
         <h2>Por que contratar um gestor de tráfego pago?</h2>
         <ul>
@@ -400,6 +370,17 @@
         <a href="https://wa.me/5511999999999" class="whatsapp-btn">Fale Conosco no WhatsApp</a>
     </footer>
 
+    <script>
+        // Garantir rolagem suave para o link da âncora
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
