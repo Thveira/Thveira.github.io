@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestão de tráfego pago para maximizar seus resultados em vendas e conversões. Escolha o plano ideal e atinja novos patamares!">
     <title>Gestão de Tráfego Pago - Potencialize seus Resultados</title>
     <style>
         /* Estilos globais */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-image: url('https://i.pinimg.com/236x/a0/39/48/a03948ff1ea48d968f75bce61f1d13ed.jpg');
@@ -20,13 +21,13 @@
         }
 
         header {
-            background: #004080;
+            background: #0056a8;
             color: #fff;
             padding: 20px 10px;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         header nav {
@@ -36,7 +37,7 @@
         }
 
         header .logo {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: bold;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
@@ -44,21 +45,25 @@
         header ul {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 15px;
         }
 
         header ul li a {
             color: #fff;
             text-decoration: none;
             font-weight: bold;
-            padding: 10px 20px;
-            transition: background 0.3s ease-in-out;
-            border-radius: 5px;
+            padding: 10px 15px;
+            transition: background 0.3s;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         header ul li a:hover {
-            background: #ff9000;
-            color: #004080;
+            background: #004080;
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 0 20px;
         }
 
         section {
@@ -68,97 +73,45 @@
         }
 
         section h2 {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
             color: #1e2a6d;
             font-weight: bold;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
         }
 
         section p {
-            font-size: 1.8rem;
+            font-size: 1.2rem;
             line-height: 1.8;
             margin: 20px 0;
             color: #2e3d69;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         section img {
             max-width: 100%;
-            border-radius: 12px;
+            border-radius: 10px;
             margin: 20px 0;
             border: 5px solid #ccc;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
 
         section a.btn {
             display: inline-block;
-            margin-top: 30px;
-            text-align: center;
-            padding: 15px 30px;
             background: #ff9000;
             color: #fff;
+            padding: 12px 24px;
+            text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            text-decoration: none;
             transition: background 0.3s, transform 0.3s;
         }
 
         section a.btn:hover {
             background: #cc7300;
-            transform: scale(1.05);
         }
 
         section a.btn:active {
             transform: scale(0.95);
-        }
-
-        #why-hire {
-            background-color: #fff;
-            padding: 60px 20px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            margin-top: 60px;
-        }
-
-        #why-hire h2 {
-            font-size: 2.5rem;
-            color: #0056a8;
-            margin-bottom: 40px;
-        }
-
-        #why-hire ul {
-            list-style: none;
-            display: grid;
-            gap: 20px;
-            grid-template-columns: 1fr 1fr 1fr;
-            justify-items: center;
-        }
-
-        #why-hire ul li {
-            background: #f9f9f9;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-align: center;
-            max-width: 320px;
-        }
-
-        #why-hire ul li:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        #why-hire ul li h3 {
-            font-size: 1.8rem;
-            color: #1e2a6d;
-            margin-bottom: 10px;
-        }
-
-        #why-hire ul li p {
-            font-size: 1.2rem;
-            color: #444;
         }
 
         .plans {
@@ -172,80 +125,28 @@
             background: #fff;
             border: 1px solid #ccc;
             border-radius: 10px;
-            width: 320px;
-            padding: 30px;
+            width: 300px;
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             position: relative;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
         }
 
         .plan-card:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .plan-card h3 {
-            margin-bottom: 15px;
-            color: #1e2a6d;
-        }
-
-        .plan-card span {
-            display: block;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #333;
-            margin: 15px 0;
-        }
-
-        .plan-card.recommended {
-            border: 2px solid #ff9000;
-            box-shadow: 0 8px 12px rgba(255, 144, 0, 0.4);
-        }
-
-        .plan-card.recommended::before {
-            content: "Recomendado";
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #ff9000;
-            color: #fff;
-            font-size: 0.8rem;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-weight: bold;
-        }
-
-        .plan-btn {
-            margin-top: 20px;
-            background: #25d366;
-            color: #fff;
-            padding: 12px 24px;
-            font-size: 1.2rem;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .plan-btn:hover {
-            background-color: #128c7e;
-            transform: scale(1.05);
-        }
-
-        .plan-btn:active {
-            transform: scale(0.95);
+            border-color: #0056a8;
         }
 
         footer {
-            background-color: #004080;
+            background-color: #0056a8;
             color: #fff;
             padding: 20px;
             text-align: center;
         }
 
-        footer a.whatsapp-btn {
+        footer a {
             background-color: #25d366;
             color: white;
             padding: 15px 30px;
@@ -256,81 +157,33 @@
             transition: background-color 0.3s, transform 0.3s;
         }
 
-        footer a.whatsapp-btn:hover {
+        footer a:hover {
             background-color: #128c7e;
             transform: scale(1.05);
-        }
-
-        footer a.whatsapp-btn:active {
-            transform: scale(0.95);
         }
     </style>
 </head>
 <body>
-
     <header>
         <nav>
             <div class="logo">Gestão de Tráfego Pago</div>
             <ul>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#planos">Planos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#why-hire">Por que contratar</a></li>
+                <li><a href="#plans">Planos</a></li>
+                <li><a href="#testimonials">Depoimentos</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
     </header>
-
-    <section>
-        <h2>Maximize seus resultados com tráfego pago</h2>
-        <p>Leve sua empresa ao próximo nível com campanhas de marketing digital altamente segmentadas e eficazes.</p>
-        <img src="https://via.placeholder.com/800x400" alt="Imagem ilustrativa">
-        <a href="#contato" class="btn">Entre em contato</a>
-    </section>
-
-    <section id="why-hire">
-        <h2>Por que nos escolher?</h2>
-        <ul>
-            <li>
-                <h3>Estratégias Personalizadas</h3>
-                <p>Criamos campanhas sob medida para o seu negócio, com foco nos melhores resultados.</p>
-            </li>
-            <li>
-                <h3>Especialistas Certificados</h3>
-                <p>Trabalhamos com as mais modernas ferramentas e técnicas do mercado de tráfego pago.</p>
-            </li>
-            <li>
-                <h3>Resultados Rápidos</h3>
-                <p>Maximizamos os resultados de suas campanhas com base em dados reais e análise contínua.</p>
-            </li>
-        </ul>
-    </section>
-
-    <section id="planos">
-        <h2>Escolha o seu plano ideal</h2>
-        <div class="plans">
-            <div class="plan-card">
-                <h3>Plano Básico</h3>
-                <span>R$ 500,00/mês</span>
-                <p>Ideal para pequenas empresas e iniciantes no marketing digital.</p>
-                <a href="https://wa.me/+1234567890" class="plan-btn">Contratar</a>
-            </div>
-            <div class="plan-card recommended">
-                <h3>Plano Intermediário</h3>
-                <span>R$ 1.000,00/mês</span>
-                <p>Para empresas que buscam expandir seus resultados com mais campanhas.</p>
-                <a href="https://wa.me/+1234567890" class="plan-btn">Contratar</a>
-            </div>
-            <div class="plan-card">
-                <h3>Plano Avançado</h3>
-                <span>R$ 2.000,00/mês</span>
-                <p>Para empresas com alta demanda de campanhas de tráfego pago.</p>
-                <a href="https://wa.me/+1234567890" class="plan-btn">Contratar</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>Entre em contato e comece a otimizar seus resultados com tráfego pago!</p>
-        <a href="https://wa.me/+1234567890" class="whatsapp-btn">Fale conosco no WhatsApp</a>
-    </footer>
+    <main>
+        <section id="about">
+            <h2>Potencialize seus Resultados</h2>
+            <p>Com a gestão de tráfego pago, você atinge novos patamares em vendas e conversões!</p>
+            <img src="https://i.pinimg.com/236x/4a/f5/f1/4af5f103996d884d5d7b5629e220f39f.jpg" alt="Ilustração de marketing digital" loading="lazy">
+            <a href="#plans" class="btn">Saiba Mais</a>
+        </section>
+        <!-- Adicione seções subsequentes -->
+    </main>
 </body>
 </html>
