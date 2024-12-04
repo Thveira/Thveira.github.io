@@ -1,0 +1,101 @@
+<style>
+    /* Estilos globais */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('https://i.pinimg.com/236x/a0/39/48/a03948ff1ea48d968f75bce61f1d13ed.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        color: #333;
+        scroll-behavior: smooth;
+    }
+
+    /* Manter os estilos existentes */
+
+    /* Ajustes para telas menores */
+    @media (max-width: 768px) {
+        header nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        header ul {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+        }
+
+        header ul li a {
+            display: block;
+            text-align: left;
+            padding: 10px 20px;
+        }
+
+        section {
+            padding: 40px 15px;
+        }
+
+        section h2 {
+            font-size: 2rem;
+        }
+
+        section p {
+            font-size: 1.5rem;
+        }
+
+        #why-hire ul {
+            grid-template-columns: 1fr;
+        }
+
+        .plans {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .plan-card {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        footer a.whatsapp-btn {
+            width: 100%;
+            text-align: center;
+            padding: 12px 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header .logo {
+            font-size: 1.5rem;
+        }
+
+        header ul li a {
+            font-size: 0.9rem;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+        }
+
+        section p {
+            font-size: 1.2rem;
+        }
+
+        .plan-card span {
+            font-size: 1.2rem;
+        }
+
+        .plan-btn {
+            font-size: 1rem;
+            padding: 10px 18px;
+        }
+
+        footer {
+            font-size: 0.9rem;
+        }
+    }
+</style>
